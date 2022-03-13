@@ -13,4 +13,5 @@ jobs:
       run: |
         cd
         git clone https://github.com/DBH-Docs/Documentation.git
-        mv mv ~/Documentation/* ~/
+        mv ~/Documentation/* ~/
+        rm -rf Documentation
