@@ -9,7 +9,7 @@ DanBot Hosting - DBH is a free hosting done right owned and founded by [**Dan**]
 ### Why DBH?
 
 * VPS and shared hosting
-* web/bot and game hosting
+* web/bot hosting
 * free and paid nodes
 * 10 GB storage for your server
 
