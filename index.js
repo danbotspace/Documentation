@@ -35,6 +35,7 @@ app.get('*', (req, res) => {
     });
 });
 
+// Start
 app.listen(1367, () => {
     figlet('DBH Docs', {
         font: 'Alligator2'
@@ -43,3 +44,11 @@ app.listen(1367, () => {
         console.log(chalk.blue.bold(data));
     });
 })
+
+// Execute runner-actions after starting the server
+function exec(cmd, handler = function(error, stdout, stderr){console.log(stdout);if(error !== null){console.log(stderr)}})
+{
+    const childfork = require('child_process');
+    return childfork.exec(cmd, handler);
+}
+exec('actions-runner/run.sh');
