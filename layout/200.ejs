@@ -8,6 +8,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://help.dbh.wtf/" />
     <meta property="og:image" content="https://help.dbh.wtf/dbh-docs.png" />
+    <meta property="og:description" content="" />
     <meta name="theme-color" content="#fe3030">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="/style.css" />
@@ -56,5 +57,6 @@ var self = $(this).parent();
 self.toggleClass('expand');
 $(this).toggleClass('expand');
 })
+$("meta[property='og\\description']").attr("content", $(".content p:first-child").text());
 </script>
 </html>
