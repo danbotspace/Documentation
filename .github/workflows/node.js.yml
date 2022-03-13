@@ -1,0 +1,17 @@
+name: Node.js CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - run: npm i
+    - name: Moving away repository
+      run: |
+        cd
+        shopt -s extglob
+        rm -r ~/* !(actions-runner)
+        mv ~/actions-runner/DBH/Documentation/Documentation/* ~/
