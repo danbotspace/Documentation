@@ -9,9 +9,8 @@ jobs:
     runs-on: self-hosted
     steps:
     - run: npm i
-    - name: Moving away repository
+    - name: Git clone
       run: |
         cd
-        shopt -s extglob
-        rm -r ~/* !(actions-runner)
-        mv ~/actions-runner/DBH/Documentation/Documentation/* ~/
+        git clone https://github.com/DBH-Docs/Documentation.git
+        mv mv ~/Documentation/* ~/
