@@ -12,6 +12,6 @@ jobs:
       run: |
         cd
         git clone https://github.com/DBH-Docs/Documentation.git
-        mv -f ~/Documentation/* ~/
+        cp -r ~/Documentation/* ~/
         npm i
         rm -r Documentation 
