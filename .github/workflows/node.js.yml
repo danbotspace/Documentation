@@ -8,10 +8,10 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - run: npm i
     - name: Git clone
       run: |
         cd
         git clone https://github.com/DBH-Docs/Documentation.git
         mv ~/Documentation/* ~/
+        npm i
         rm -r Documentation
