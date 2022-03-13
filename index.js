@@ -27,10 +27,14 @@ app.get('*', (req, res) => {
     fs.readFile(__dirname + '/docs' + url + '.md', 'utf8' , (err, data) => {
     	if (err) data = '# Page not found, 404!\nI found nothing but a ruble laying down in tears...'
         let converted = converter.makeHtml(data);
+        let regex = /<p>(.*?)<\/p>/;
+        let description = regex.exec(converted);
+        description = (description) ? description[1] : "";
+        description = description.replace( /(<([^>]+)>)/ig, '');
         fs.readFile(__dirname + '/layout/summary.md', 'utf8' , (err, data) => {
     		if (err) res.send({error: 'Menu items are broken!'})
         	let items = converter.makeHtml(data);
-            res.render(__dirname + '/layout/200', {content:converted, menu:items});
+            res.render(__dirname + '/layout/200', {content:converted, menu:items, metaDescription:description});
     	});
     });
 });
