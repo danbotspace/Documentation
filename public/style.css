@@ -73,7 +73,7 @@
     align-items: center;
     justify-content: space-around;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     padding: 0 25px;
     position: relative;
@@ -281,6 +281,7 @@ li:first-child {
     }
     .header-links a {
         padding: 0 15px;
+	font-size: 13px;
     }
     .logo-container a {
         color: #cc342d;
