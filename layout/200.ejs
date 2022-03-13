@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>DBH Docs</title>
+</head>
+<body>
+    <nav class="header">
+        <div class="logo-container">
+            <div class="hamburger">
+                <i class="bx bx-menu"></i>
+            </div>
+            <a href="https://help.dbh.wtf/">
+                <img src="/dbh-docs.png" class="logo-image" alt="DBH Docs" width="512" height="512"> </a>
+            <a href="https://help.dbh.wtf/">Docs</a>
+        </div>
+        <ul class="header-links">
+            <li><a href="https://help.dbh.wtf/">Home</a></li>
+            <li><a href="https://panel.danbot.host/">Panel</a></li>
+            <li><a href="https://github.com/DBH-Docs/Docs">GitHub</a></li>
+        </ul>
+    </nav>
+        <div class="wrapper">
+            <nav class="menu">
+        		<div class="menu-hide">
+            		<i class="bx bx-chevron-left"></i>
+        		</div>
+        		<div class="items">
+            		<%- menu %>
+        		</div>
+    		</nav>
+            <div class="content">
+                <%- content %>
+            </div>
+        </div>
+</body>
+<script>
+$('.menu-hide, .bx-menu').on('click', function() {
+$('.menu, .items, .bx-chevron-left').toggleClass('unwrap')
+});
+$('.items li em').on('click', function() {
+var self = $(this).parent();
+self.toggleClass('expand');
+$(this).toggleClass('expand');
+})
+</script>
+</html>

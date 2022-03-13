@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-rate-limit": "^6.3.0",
+    "figlet": "^1.5.2",
+    "nodemon": "^2.0.15",
+    "serve-favicon": "^2.5.0",
+    "showdown": "^2.0.3"
+  }
+}
