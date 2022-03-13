@@ -43,5 +43,3 @@ app.listen(1367, () => {
         console.log(chalk.blue.bold(data));
     });
 })
-
-// yesn't
