@@ -1,6 +1,6 @@
 # Welcome to DBH documentation!
 
-Here you can find solutions to your issues, extra help and additional free content to improve your programming experience! Want to contribute to this project? [GitHub repository](https://github.com/Domin-MND/help.dbh.wtf), [Dan's PayPal](https://paypal.me/DanBotHosting).
+Here you can find solutions to your issues, extra help and additional free content to improve your programming experience! Want to contribute to this project? [GitHub repository](https://github.com/DBH-Docs/Documentation), [Dan's PayPal](https://paypal.me/DanBotHosting).
 
 ## What's DBH?
 
