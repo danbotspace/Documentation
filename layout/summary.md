@@ -9,5 +9,5 @@
 * *Commands*
   [Server proxy](/)
 * *Server Guides*
-  [Intro] (/ServerGuides/intro)
+  [Intro] (/Server/intro)
   
