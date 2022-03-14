@@ -12,3 +12,4 @@
   [Intro](/server/intro)
   [Red Discord Bot](/server/rdb)
   [Node.js](/server/nodejs)
+  [ShareX](/server/sharex)
