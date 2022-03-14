@@ -9,5 +9,5 @@
 * *Commands*
   [Server proxy](/)
 * *Server Guides*
-  [Intro] (/Server/intro)
-  [Red Discord Bot] (/Server/rdb)
+  [Intro](/server/intro)
+  [Red Discord Bot](/server/rdb)
