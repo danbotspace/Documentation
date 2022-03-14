@@ -7,7 +7,7 @@
   [DBH API](/)
   [Status API](/)
 * *Commands*
-  [server proxy](/)
+  [Server proxy](/)
 * *Server Guides*
-  [intro] (/Server/intro)
+  [Intro] (/ServerGuides/intro)
   
