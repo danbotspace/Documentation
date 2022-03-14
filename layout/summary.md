@@ -8,3 +8,5 @@
   [Status API](/)
 * *Commands*
   [server proxy](/)
+* *Server Guides*
+  [intro] (/ServerGuides/intro)
