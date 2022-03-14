@@ -1,6 +1,6 @@
 /* --- BASE --- */
 :root {
-    font-family: 'Ubuntu Mono', monospace, 'Segoe UI';
+    font-family: 'Ubuntu Mono', monospace;
     scrollbar-color: #52555c #21252b;
     scrollbar-width: thin;
 }
@@ -227,7 +227,7 @@ li:first-child {
 /* --- FORMAT --- */
 .content {
     color: #434b57;
-    font-family: "Segoe UI"
+    font-family: "Open Sans", sans-serif;
 }
 .content > pre, code {
 	border: 1px solid #dfdfdf;
