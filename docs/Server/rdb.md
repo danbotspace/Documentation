@@ -37,7 +37,7 @@ Firstly. Go to .config/Red-DiscordBot And delete that config.json. after that op
 In your prefix variable after prefix add a **--owner** after that put a space and follow that by your user id.
 
 # 2.2 Example
-`./ --owner 248470317540966443 --dev` in here **./** Is my prefix. **--owner 248470317540966443** is my user id. **--dev** is used for some extra dev commands. In --owner replace my id with your I'd
+`./ --owner 248470317540966443 --dev` in here **./** Is my prefix. **--owner 248470317540966443** is my user id. **--dev** is used for some extra dev commands. In --owner replace my id with your id
 
 # Conclusion
 
