@@ -10,4 +10,4 @@
   [Server proxy](/)
 * *Server Guides*
   [Intro] (/Server/intro)
-  
+  [Red Discord Bot] (/Server/rdb)
