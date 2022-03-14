@@ -7,4 +7,4 @@ Regardless of your experience in DBH, you will find something new here. Here we 
 ### Who are we?
 Basically we're the same as you. To make it clear for you we're developing this project. It exists based on our experience and experience of other members.
 
-**Note**: In order to contribute the project by making pages please consider checking construction of other pages.
+**Note**: In order to contribute the project by making pages please consider checking construction of other pages. Or check CONTRIBUTE.md that will come soon!
