@@ -5,11 +5,12 @@
   [Proxying](/beginner/proxying)
 * *Advanced Management*
   [DBH API](/)
+  [ShareX Setup](/advanced/sharex-setup)
   [Status API](/)
 * *Commands*
   [Server proxy](/)
 * *Server Guides*
   [Intro](/server/intro)
-  [Red Discord Bot](/server/rdb)
   [Node.js](/server/nodejs)
+  [Red Discord Bot](/server/rdb)
   [ShareX](/server/sharex)
