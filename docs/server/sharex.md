@@ -52,3 +52,7 @@ This are the important settings. For more info of another values please visit [t
 First, follow [this steps](https://discordpy.readthedocs.io/en/stable/discord.html) to create and invite your bot.
 
 Once you created it, set the Token of the bot, the [ID of the channel and the IDs of the people](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) that can use the bot. Next set the bot's prefix and you're done.
+
+# Conclusion
+
+Hope we helped you! If you think that something is wrong, please consider [creating a PR in our repository.](https://github.com/DBH-Docs/Documentation/blob/main/docs/server/sharex.md)
