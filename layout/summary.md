@@ -1,9 +1,9 @@
 * [Introduction](/introduction)
   [Getting Started](/getting-started)
   [Credits](/credits)
-* *Beginner's guidebook*
+* *Beginner's Guidebook*
   [Proxying](/beginner/proxying)
-* *Advanced management*
+* *Advanced Management*
   [DBH API](/)
   [Status API](/)
 * *Commands*
