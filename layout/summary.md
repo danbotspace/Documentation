@@ -3,7 +3,7 @@
   [Credits](/credits)
 * *Beginner's Guidebook*
   [Proxying](/beginner/proxying)
-  [Creating A Bot](/creating-a-bot)
+  [Creating A Bot](/beginner/creating-a-bot)
 * *Advanced Management*
   [DBH API](/)
   [ShareX Setup](/advanced/sharex-setup)
