@@ -236,6 +236,7 @@ li:first-child {
 .content pre {
     padding: 10px;
     margin: 16px 0;
+    white-space: break-spaces;
 }
 .content code {
 	padding: 0.125rem 0.3125rem 0.0625rem;
