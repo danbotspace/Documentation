@@ -41,7 +41,7 @@ This are the important settings. For more info of another values please visit [t
 
 ### Public configuration (everyone can use your server)
 
-- Set `public` to false
+- Set `public` to true
 
 - Set key into `[""]` (default) to let everyone upload.
 
