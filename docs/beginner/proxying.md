@@ -2,6 +2,17 @@
 
 Proxying might sound a hard job to do but actually it's not! In this page I used cloudflare to proxy my domain!
 
+## Available DBH domains
+
+* *.never-gonna-give-you-up.xyz
+* *.never-gonna-let-you-down.xyz
+* *.never-gonna-make-you-cry.xyz
+* *.never-gonna-run-around-and-desert-you.xyz
+* *.never-gonna-say-goodbye.xyz
+* *.never-gonna-tell-a-lie-and-hurt-you.xyz
+* *.rick-roll.xyz
+> **Good to know**: By becoming a donator you get an access to *.only-fans.club!
+
 ## Set DNS record
 
 In order to proxy your domain to one of your servers you have to set a DNS record!
