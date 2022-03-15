@@ -3,7 +3,7 @@ ShareX can be used to capture full screen or partial screenshots (which can be e
 
 In this document we will show you how to create a ShareX server, configure it and upload your first screenshot. 
 
-# Creating the Serverserver
+# Creating the Server
 To create a server, we suppose that you've already [created and linked an account into the panel.](https://help.dbh.wtf/getting-started)
 
 In that case, go to DBH server and run this command:
