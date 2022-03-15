@@ -17,7 +17,7 @@ Creating a Discord bot might sound difficult, but it can be done very easily.
 10. Click on 'OAuth2' -> 'URL Generator';
 11. Select the 'bot' scope (and applications.commands scope for application commands);
 12. Select your permissions and copy the link generated.
-
+<br>
 And there you have it! Your own very cool bot.
-
+<br>
 If you want to get your bot invited to DBH, please read [this](/beginner/inviting-your-bot)
