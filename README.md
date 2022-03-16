@@ -1,3 +1,4 @@
+Code Status:
 [![CodeQL](https://github.com/DBH-Docs/Documentation/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/DBH-Docs/Documentation/actions/workflows/codeql-analysis.yml)
 
 # DanBot Hosting Documentation
