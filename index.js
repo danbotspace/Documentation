@@ -40,7 +40,7 @@ app.get('*', (req, res) => {
 });
 
 // Start
-app.listen(1365, () => {
+app.listen(process.env.SERVER_PORT ? process.env.SERVER_PORT : 8080 /*If DBH port is present, returns the port if not, returns 8080*/, () => {
     figlet('DBH Docs', {
         font: 'Alligator2'
     }, function(err, data) {
