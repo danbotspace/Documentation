@@ -40,7 +40,7 @@ app.get('*', (req, res) => {
 });
 
 // Start
-app.listen(1367, () => {
+app.listen(1365, () => {
     figlet('DBH Docs', {
         font: 'Alligator2'
     }, function(err, data) {
