@@ -6,11 +6,11 @@
   [Proxying](/beginner/proxying)
   [Creating A Bot](/beginner/creating-a-bot)
 * *Advanced Management*
-  [DBH API](/)
+  [DBH API](/advanced/dbh-api)
   [ShareX Setup](/advanced/sharex-setup)
-  [Status API](/)
+  [Status API](/advanced/status-api)
 * *Commands*
-  [Server proxy](/)
+  [Server proxy](/commands/server/proxy)
 * *Server Guides*
   [Intro](/server/intro)
     * *Development*
