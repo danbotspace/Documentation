@@ -12,7 +12,7 @@ This guide provides an information on what **ShareX** is, how to set it up using
 
 ![Frame example](/content/sharex/frame-effect.png)
 
-> **Note**: ShareX is only available on Windows.
+t{**Note**: ShareX is only available on Windows.}
 
 # How to setup?
 
@@ -81,7 +81,7 @@ By opening these files you will find similar "templates":
 }
 ```
 
-> **Note**: You have to either install these files or copy text in clipboard to import uploader settings soon.
+t{**Note**: You have to either install these files or copy text in clipboard to import uploader settings soon.}
 
 Consider changing `[YOUR_DOMAIN]` field in "RequestURL" to your [proxied](/beginner/proxying) domain. If you want your **ShareX** space to be private you have to set your own password in "key"! In `src/config.json` make sure to change "public", "port", "domain" and "key"
 
@@ -123,4 +123,4 @@ You can manually make your own cool frame effect just like I did but using [offi
 
 After saving all stuff you're ready to share your cool screenshots made using **ShareX**!
 
-> **Note**: If you wish you can easily configure hotkeys as well.
+t{**Note**: If you wish you can easily configure hotkeys as well.}
