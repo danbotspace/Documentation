@@ -48,7 +48,7 @@ app.get('*', (req, res) => {
     let url = req.url
     if (url == '/') url = '/introduction';
     fs.readFile(__dirname + '/docs' + url + '.md', 'utf8' , (err, data) => {
-    	if (err) data = '# Page not found, 404!\nI found nothing but a ruble laying down in tears...'
+    	if (err) data = '# Page not found, 404!\nI found nothing but a ruble laying down in tears...\n![Ruble Crying](/content/ruble-crying.png)'
         let converted = converter.makeHtml(data);
         let regex = /<p>(.*?)<\/p>/;
         let description = regex.exec(converted);
