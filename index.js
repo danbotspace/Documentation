@@ -14,17 +14,17 @@ showdown.extension("Docs", function() {
   return [
     {
       type: 'lang',
-      regex: '<\{(.*)\} (.*)',
+      regex: 'p\{(.*)\} (.*)',
       replace: function(text, leadingSlash, match) {
-          match = text.match('<\{(.*)\} (.*)')
+          match = text.match('p\{(.*)\} (.*)')
           return '<a href="' + match[1] + '" class="page">' + match[2] + '</a>';
       }
     },
     {
       type: 'lang',
-      regex: '?\{(.*)\} (.*)',
+      regex: 't\{(.*)\} (.*)',
       replace: function(text, leadingSlash, match) {
-          match = text.match('?\{(.*)\} (.*)')
+          match = text.match('t\{(.*)\} (.*)')
           return '<disc><div><strong>' + match[1] + ':</strong>' + match[2] + '</div></disc>';
       }
     }
