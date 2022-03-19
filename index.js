@@ -9,6 +9,28 @@ const express = require('express'),
       showdown  = require('showdown'),
       converter = new showdown.Converter({strikethrough: 'true', underline: 'true'});
 
+// Declare extension
+showdown.extension("Docs", function() {
+  return [
+    {
+      type: 'lang',
+      regex: '<\{(.*)\} (.*)',
+      replace: function(text, leadingSlash, match) {
+          match = text.match('<\{(.*)\} (.*)')
+          return '<a href="' + match[1] + '" class="page">' + match[2] + '</a>';
+      }
+    },
+    {
+      type: 'lang',
+      regex: '?\{(.*)\} (.*)',
+      replace: function(text, leadingSlash, match) {
+          match = text.match('?\{(.*)\} (.*)')
+          return '<disc><div><strong>' + match[1] + ':</strong>' + match[2] + '</div></disc>';
+      }
+    }
+  ]
+});
+
 // Ratelimiting
 const limiter = rateLimit({
 	windowMs: 60 * 1000,
@@ -19,6 +41,8 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use(favicon(__dirname + '/public/dbh-docs.ico'));
 app.use(express.static(path.join(__dirname, "public")));
+// Add extension to converter
+converter.useExtension("Docs");
 
 app.set('view engine', 'ejs');
 app.get('*', (req, res) => {
