@@ -8,14 +8,16 @@ git clone https://github.com/DBH-Docs/Documentation
 After that. Start editing the code
 #Extra
 There are some extra tags/extension that can make your docs look cooler they are as below:
+```
+ FOR LINK TEXT:
 
-> LINK
+p{link} text goes here
 
-`p{link} text goes here`
 
-> NOTE
+ FOR NOTE TEXT:
 
-`t{text goes here}`
+t{text goes here}
+```
 
 # Requirements
 Make sure after you make edits you go into /layout/summary.md and edit it to add your edited documents in it. A example is below. Can't figure out? Checkout /layout/summary.md for more examples or create a issue for help
