@@ -12,8 +12,10 @@
   [Server proxy](/)
 * *Server Guides*
   [Intro](/server/intro)
-  [Node.js](/server/development/nodejs)
-  [Red Discord Bot](/server/development/rdb)
-  [ShareX](/server/software/sharex)
+    * *Development*
+    [Node.js](/server/development/nodejs)
+    [Red Discord Bot](/server/development/rdb)
+    * *Software*
+    [ShareX](/server/software/sharex)
     * *Minecraft*
     [Paper](/server/minecraft/paper)
