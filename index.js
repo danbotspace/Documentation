@@ -22,10 +22,10 @@ showdown.extension("Docs", function() {
     },
     {
       type: 'lang',
-      regex: 't\{(.*)\} (.*)',
+      regex: 't\{(.*)\}',
       replace: function(text, leadingSlash, match) {
-          match = text.match('t\{(.*)\} (.*)')
-          return '<disc><div><strong>' + match[1] + ':</strong>' + match[2] + '</div></disc>';
+          match = text.match('t\{(.*)\}')
+          return '<disc> <div>' + match[1] + '</div> </disc>';
       }
     }
   ]
