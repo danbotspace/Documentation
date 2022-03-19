@@ -53,7 +53,7 @@ $('.fa-bars').on('click', function() {
 $('.sidebar, .items, .logo-container').toggleClass('unwrap')
 });
 $('.items li em').on('click', function() {
-var self = $(this).parent();
+let self = $(this).parent();
 self.toggleClass('expand');
 $(this).toggleClass('expand');
 })
@@ -65,9 +65,11 @@ if (window.matchMedia('screen and (max-width: 1250px)').matches) {
 $('.sidebar, .items, .logo-container').addClass('unwrap');
 }
 })
-$("nav [href]").each(function() {
+$('nav [href]').each(function() {
 if (this.href == window.location.href) {
-$(this).addClass("active");
+$(this).addClass('active');
+$(this).parents('li').addClass('expand');
+$(this).parents('li').children('em').addClass('expand');
 }
 });
 </script>
