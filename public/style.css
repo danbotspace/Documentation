@@ -302,7 +302,7 @@ body {
     transition: all ease-in-out .12s;
 }
 
-disc {
+tip {
     border: 1px solid #36363b;
     background-color: #333338;
     border-radius: 4px;
@@ -313,10 +313,10 @@ disc {
     display: flex;
     align-items: center;
 }
-disc:before {
+tip:before {
     font: var(--fa-font-solid);
     content: "\f059";
-	min-width: 40px;
+    min-width: 40px;
     font-size: 30px;
     color: #fff;
     float: left;
