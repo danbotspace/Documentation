@@ -7,7 +7,7 @@ const express = require('express'),
       path = require('path'),
       rateLimit = require('express-rate-limit'),
       showdown  = require('showdown'),
-      converter = new showdown.Converter({strikethrough: 'true', underline: 'true'});
+      converter = new showdown.Converter({strikethrough: 'true', underline: 'true', disableForced4SpacesIndentedSublists: 'true'});
 
 // Declare extension
 showdown.extension("Docs", function() {
