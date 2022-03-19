@@ -32,8 +32,8 @@ Or an image of bears
 
 ![bears](http://placebear.com/200/200)
 
-?{Note}Bears have excellent senses of smell, sight and hearing...
+t{Note} Bears have excellent senses of smell, sight and hearing...
 
-<{/}You shouldn't be here!
+p{/} You shouldn't be here!
 
 The end ...
