@@ -25,7 +25,7 @@ showdown.extension("Docs", function() {
       regex: 't\{(.*)\}',
       replace: function(text, leadingSlash, match) {
           match = text.match('t\{(.*)\}')
-          return '<disc> <div>' + match[1] + '</div> </disc>';
+          return '<tip><f>' + match[1] + '</f></tip>';
       }
     }
   ]
@@ -41,8 +41,7 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use(favicon(__dirname + '/public/dbh-docs.ico'));
 app.use(express.static(path.join(__dirname, "public")));
-// Add extension to converter
-converter.useExtension("Docs");
+converter.useExtension("Docs"); /* Add an extension to converter */
 
 app.set('view engine', 'ejs');
 app.get('*', (req, res) => {
