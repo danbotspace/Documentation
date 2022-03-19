@@ -3,60 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css" />
     <meta property="og:title" content="DBH Docs" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://help.dbh.wtf/" />
-    <meta property="og:image" content="https://help.dbh.wtf/dbh-docs.png" />
+    <meta property="og:image" content="/dbh-docs.png" />
     <meta property="og:description" content="<%= metaDescription %>" />
-    <meta name="theme-color" content="#fe3030">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <meta name="theme-color" content="#5865f2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>DBH Docs</title>
 </head>
 <body>
-    <nav class="header">
+    <nav class="sidebar">
         <div class="logo-container">
-            <div class="hamburger">
-                <i class="bx bx-menu"></i>
-            </div>
-            <a href="/">
-                <img src="/dbh-docs.png" class="logo-image" alt="DBH Docs" width="512" height="512"> </a>
+            <a href="/"><img src="/dbh-docs.png" alt="DBH Docs" width="512" height="512"></a>
             <a href="/">Docs</a>
         </div>
-        <ul class="header-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="https://panel.danbot.host/">Panel</a></li>
-            <li><a href="https://github.com/DBH-Docs/Documentation">GitHub</a></li>
-        </ul>
-    </nav>
-        <div class="wrapper">
-            <nav class="menu">
-        		<div class="menu-hide">
-            		<i class="bx bx-chevron-left"></i>
-        		</div>
-        		<div class="items">
-            		<%- menu %>
-        		</div>
-    		</nav>
-            <div class="content">
-                <%- content %>
-            </div>
+        <div class="items">
+            <%- menu %>
         </div>
+    </nav>
+    <div class="wrapper">
+        <nav class="header">
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="header-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="https://panel.danbot.host/">Panel</a></li>
+                <li><a href="https://github.com/DBH-Docs/Documentation">GitHub</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <%- content %>
+        </div>
+        <nav class="footer">
+            <p>This Website/Software is not <a href="https://danbot.host/">official</a>!
+            <a href="https://github.com/DBH-Docs/Documentation"><i class="fa-brands fa-github"></i></a>
+            <a href="https://discord.gg/dbh"><i class="fa-brands fa-discord"></i></a>
+        </nav>
+    </div>
 </body>
 <script>
-$('.menu-hide, .bx-menu').on('click', function() {
-$('.menu, .items, .bx-chevron-left').toggleClass('unwrap')
+$('.fa-bars').on('click', function() {
+$('.sidebar, .items, .logo-container').toggleClass('unwrap')
 });
 $('.items li em').on('click', function() {
 var self = $(this).parent();
 self.toggleClass('expand');
 $(this).toggleClass('expand');
+})
+if (window.matchMedia('screen and (max-width: 1250px)').matches) {
+$('.sidebar, .items, .logo-container').addClass('unwrap');
+}
+$('.content').on('click', function() {
+if (window.matchMedia('screen and (max-width: 1250px)').matches) {
+$('.sidebar, .items, .logo-container').addClass('unwrap');
+}
 })
 </script>
 </html>

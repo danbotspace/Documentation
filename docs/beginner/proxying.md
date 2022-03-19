@@ -11,7 +11,7 @@ Proxying might sound a hard job to do but actually it's not! In this page I used
 * *.never-gonna-say-goodbye.xyz
 * *.never-gonna-tell-a-lie-and-hurt-you.xyz
 * *.rick-roll.xyz
-> **Good to know**: By becoming a donator you get an access to *.only-fans.club!
+t{**Good to know**: By becoming a donator you get an access to *.only-fans.club!}
 
 ## Set DNS record
 
@@ -23,7 +23,7 @@ There after clicking "Add record" you have to fill all fields as in the image:
 
 ![Fill given fields](/content/proxy-fields.png)
 
-**Note**: if you're using cloudflare consider turning off "Proxy Status".
+t{**Note**: if you're using cloudflare consider turning off "Proxy Status".}
 
 After everything is done click "Save" and head to discord!
 

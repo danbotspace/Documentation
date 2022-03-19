@@ -14,6 +14,8 @@ DanBot Hosting - DBH is a free hosting done right owned and founded by [**Dan**]
 * web/bot hosting
 * free and paid nodes
 * 10 GB storage for your server
+* Unlimited Ram in your server
+t{**Note**: this only applies to some server types. Not all server types have unlimited ram. Example: MC Server is limited to **2GB** ram as of now.}
 
 ## Getting started.
 

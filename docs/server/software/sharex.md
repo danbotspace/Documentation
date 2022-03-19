@@ -55,6 +55,8 @@ Once you created it, set the Token of the bot, the [ID of the channel and the ID
 
 # Conclusion
 
-Next to read: [ShareX Client Setup](https://help.dbh.wtf/advanced/sharex-setup)
+In order to find more head to this page!
+
+p{https://help.dbh.wtf/advanced/sharex-setup} ShareX Client Setup
 
 Hope we helped you! If you think that something is wrong, please consider [creating a PR in our repository.](https://github.com/DBH-Docs/Documentation/blob/main/docs/server/sharex.md)

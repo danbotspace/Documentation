@@ -7,7 +7,29 @@ const express = require('express'),
       path = require('path'),
       rateLimit = require('express-rate-limit'),
       showdown  = require('showdown'),
-      converter = new showdown.Converter({strikethrough: 'true', underline: 'true'});
+      converter = new showdown.Converter({strikethrough: 'true', underline: 'true', disableForced4SpacesIndentedSublists: 'true'});
+
+// Declare extension
+showdown.extension("Docs", function() {
+  return [
+    {
+      type: 'lang',
+      regex: 'p\{(.*)\} (.*)',
+      replace: function(text, leadingSlash, match) {
+          match = text.match('p\{(.*)\} (.*)')
+          return '<a href="' + match[1] + '" class="page">' + match[2] + '</a>';
+      }
+    },
+    {
+      type: 'lang',
+      regex: 't\{(.*)\}',
+      replace: function(text, leadingSlash, match) {
+          match = text.match('t\{(.*)\}')
+          return '<tip><f>' + match[1] + '</f></tip>';
+      }
+    }
+  ]
+});
 
 // Ratelimiting
 const limiter = rateLimit({
@@ -19,6 +41,7 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use(favicon(__dirname + '/public/dbh-docs.ico'));
 app.use(express.static(path.join(__dirname, "public")));
+converter.useExtension("Docs"); /* Add an extension to converter */
 
 app.set('view engine', 'ejs');
 app.get('*', (req, res) => {

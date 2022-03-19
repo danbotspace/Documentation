@@ -45,4 +45,3 @@ Now you should be prompted the gitea's configuration page.
 ## Creating a Database
 
 In the gitea's configuration you will be asked to create a database. Luckly, DBH offers you 2 free databases per server. For creating one go to the panel, click on your server, then click "Databases" and then "New Database".
-
