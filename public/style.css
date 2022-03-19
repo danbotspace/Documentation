@@ -87,8 +87,11 @@ body {
     transition: all ease-in-out .12s;
     border-radius: 6px;
 }
-.footer a {
-    margin-left: 10px;
+.footer div a {
+    margin-left: 5px;
+}
+.footer div:last-child {
+    margin-right: 5px;
 }
 .footer i:hover {
     background-color: #36363a;
@@ -335,7 +338,11 @@ tip:before {
 
     /* --- FOOTER --- */
     .footer {
-        height: 80px;
+        flex-direction: column;
+        height: 100px;
+    }
+    .footer div {
+        margin-top: 5px;
     }
 
     /* --- SIDEBAR --- */
@@ -356,6 +363,6 @@ tip:before {
     .content {
         width: unset;
         margin: 90px auto 0 auto;
-        min-height: calc(100vh - 190px);
+        min-height: calc(100vh - 200px);
     }
 }
