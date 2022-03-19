@@ -7,6 +7,9 @@ body {
     scrollbar-color: #52555c #21252b;
     scrollbar-width: thin;
 }
+::selection {
+    background-color: #5865f2;;
+}
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -101,6 +104,7 @@ body {
     scrollbar-color: #3d3d41 #2c2c31;
     scrollbar-width: thin;
     overflow-y: scroll;
+    user-select: none;
     direction: rtl;
 }
 .sidebar::-webkit-scrollbar {
