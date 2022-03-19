@@ -1,6 +1,7 @@
 * [Introduction](/introduction)
   [Getting Started](/getting-started)
   [Credits](/credits)
+  [Contribution Guide](/contribute)
 * *Beginner's Guidebook*
   [Proxying](/beginner/proxying)
   [Creating A Bot](/beginner/creating-a-bot)
