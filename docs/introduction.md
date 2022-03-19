@@ -19,7 +19,8 @@ t{**Note**: this only applies to some server types. Not all server types have un
 
 ## Getting started.
 
-To easily get started checkout either `#📗╏getting-started` channel in DBH Discord Server or head to [Getting Started](https://help.dbh.wtf/getting-started) page
+To easily get started checkout either `#📗╏getting-started` channel in DBH Discord Server or head to this page:
+p{https://help.dbh.wtf/getting-started} Getting Started
 
 ## Why this documentation exist?
 
