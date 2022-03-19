@@ -15,3 +15,5 @@
   [Node.js](/server/nodejs)
   [Red Discord Bot](/server/rdb)
   [ShareX](/server/sharex)
+  * *Minecraft*
+    [Paper](/server/minecraft/paper)
