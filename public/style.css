@@ -81,12 +81,14 @@ body {
     font-size: 13px;
 }
 .footer i {
-    margin-left: 10px;
     padding: 10px;
     font-size: 20px;
     color: #fff;
     transition: all ease-in-out .12s;
     border-radius: 6px;
+}
+.footer a {
+    margin-left: 10px;
 }
 .footer i:hover {
     background-color: #36363a;
