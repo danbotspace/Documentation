@@ -21,8 +21,7 @@
 <body>
     <nav class="sidebar">
         <div class="logo-container">
-            <a href="/"><img src="/dbh-docs.png" alt="DBH Docs" width="512" height="512"></a>
-            <a href="/">Docs</a>
+            <img src="/dbh-docs.png" alt="DBH Docs" width="512" height="512">Docs
         </div>
         <div class="items">
             <%- menu %>
@@ -66,5 +65,10 @@ if (window.matchMedia('screen and (max-width: 1250px)').matches) {
 $('.sidebar, .items, .logo-container').addClass('unwrap');
 }
 })
+$("nav [href]").each(function() {
+if (this.href == window.location.href) {
+$(this).addClass("active");
+}
+});
 </script>
 </html>
