@@ -33,7 +33,7 @@ Your File Manager on the panel should look like this where `.sxcu` files will be
 By opening these files you will find similar "templates":
 
 > Images_and_Files.sxcu
-```
+```json
 {
   "Version": "12.4.0",
   "Name": "Images_and_Files",
@@ -48,7 +48,7 @@ By opening these files you will find similar "templates":
 }
 ```
 > Text.sxcu
-```
+```json
 {
   "Version": "12.4.0",
   "Name": "Text",
@@ -63,7 +63,7 @@ By opening these files you will find similar "templates":
 }
 ```
 > URL_Shortener.sxcu
-```
+```json
 {
   "Version": "12.4.0",
   "Name": "URL_Shortener",
