@@ -7,52 +7,15 @@ const express = require('express'),
       path = require('path'),
       rateLimit = require('express-rate-limit'),
       showdown  = require('showdown'),
-      showdownHighlight = require("showdown-highlight");
-
-// Selfmade extension(will be moved soon)
-showdown.extension("Docs", function() {
-    let page = new RegExp('p\{(.*)\} (.*)');
-    let tip = new RegExp('t\{(.*)\}');
-    return [
-        /*{
-            type: 'lang',
-            regex: page,
-            replace: '<a href="$1" class="page">$2</a>'
-        },
-        {
-            type: 'lang',
-            regex: tip,
-            replace: '<tip><f>$1</f></tip>'
-        },*/
-        {
-            type: 'listener',
-            listeners: {
-                'italicsAndBold.after': function (event, text, options, globals) {
-                    return text.replace(tip, function (match, p1, offset, string) {
-                        return '<tip><f>' + p1 + '</f></tip>';
-                    });
-                }
-            }
-        },
-        {
-            type: 'listener',
-            listeners: {
-                'italicsAndBold.after': function (event, text, options, globals) {
-                    return text.replace(page, function (match, p1, p2, offset, string) {
-                        return '<a href="' + p1 + '" class="page">' + p2 + '</a>';
-                    });
-                }
-            }
-        }
-    ]
-});
+      showdownDBH = require('./extension.js'),
+      showdownHighlight = require('showdown-highlight');
 
 // Defining converter with options
 const converter = new showdown.Converter({
           strikethrough: 'true',
           underline: 'true',
           disableForced4SpacesIndentedSublists: 'true',
-          extensions: ['Docs', showdownHighlight({ pre: true })]
+          extensions: ['showdownDBH', showdownHighlight({ pre: true })]
 });
 
 // Ratelimiting
