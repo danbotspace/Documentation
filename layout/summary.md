@@ -21,7 +21,7 @@
 {{
 [[ +-Database-+
 ++ fa-solid fa-leaf ++ /server/database/mongodb ++ MongoDB ++
-++ fas fa-elephant ++ /server/database/postgres ++ Postgres ++
+++ fa-solid fa-elephant ++ /server/database/postgres ++ Postgres ++
 ++ fa-solid fa-layer-group ++ /server/database/redis ++ Redis ++
 ]]
 [[ +-Development-+
