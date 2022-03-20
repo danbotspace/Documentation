@@ -16,17 +16,18 @@ After that. Start editing the code
 
 There are some extra markdown widgets that can make your page look cooler they are as below:
 
-> Page
+```
+PAGE: p{link} text goes here
+```
 
-`p{link} text goes here`
-
-> Tip
-
-`t{text goes here}`
+```
+TIP: t{text goes here}
+```
 
 To see all markdown expressions head to these pages:
 
 p{/markdown} Origin: Markdown
+
 p{https://github.com/DBH-Docs/Documentation/blob/main/docs/markdown.md} GitHub: Markdown
 
 # Requirements
