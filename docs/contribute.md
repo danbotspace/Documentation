@@ -34,8 +34,8 @@ p{https://github.com/DBH-Docs/Documentation/blob/main/docs/markdown.md} GitHub: 
 Make sure after you make edits you go into /layout/summary.md and edit it to add your edited documents in it. An example is below. Can't figure out? Checkout `/layout/summary.md` for more examples or create a issue for help:
 
 ```
-    * *Your Docs Name*
-    [Name that will show on sidebar](/path/to/docs)
+    * *Category name*
+    [Documentation name](/path/to/docs)
 ```
 
 t{**Note**: in the path you must not include .md extension. And also the path starts from /docs so you don't need to input /docs as the first thing. Example: /server/software/git-ea.md}
