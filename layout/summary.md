@@ -1,39 +1,54 @@
-* [Introduction](/introduction)
-  [Getting Started](/getting-started)
-  [Credits](/credits)
-* *Beginner's Guidebook*
-  [Proxying](/beginner/proxying)
-  [Creating A Bot](/beginner/creating-a-bot)
-* *Advanced Management*
-  [DBH API](/advanced/dbh-api)
-  [ShareX Setup](/advanced/sharex-setup)
-  [Status API](/advanced/status-api)
-* *Commands*
-  [Server proxy](/commands/server/proxy)
-* *Server Guides*
-  [Intro](/server/intro)
-    * *Database*
-    [MongoDB](/server/database/mongodb)
-    [Postgres](/server/database/postgres)
-    [Redis](/server/database/redis)
-    * *Development*
-    [All In One](/server/development/aio)
-    [Code Server](/server/development/code-server)
-    [Java](/server/development/java)
-    [Node.js](/server/development/nodejs)
-    [Python](/server/development/python)
-    [Red Discord Bot](/server/development/rdb)
-    * *Minecraft*
-    [Forge](/server/minecraft/forge)
-    [Paper](/server/minecraft/paper)
-    [Spigot](/server/minecraft/spigot)
-    [Waterfall](/server/minecraft/waterfall)
-    * *Software*
-    [Gitea](/server/software/gitea)
-    [Haste](/server/software/haste)
-    [ShareX](/server/software/sharex)
-    * *Voice Servers*
-    [Mumble](/server/voice-server/mumble)
-    [TeamSpeak 3](/server/voice-server/teamspeak3)
-    * *Web Hosting*
-    [Nginx](/server/web-hosting/nginx)
+{{
+[[
+++ fa-solid fa-circle-plus ++ /introduction ++ Introduction ++
+++ fa-solid fa-hand-peace ++ /getting-started ++ Getting Started ++
+++ fa-solid fa-cookie ++ /credits ++ Credits ++
+]]
+[[ *Beginner's Guidebook*
+++ fa-solid fa-circle-plus ++ /beginner/proxying ++ Proxying ++
+++ fa-solid fa-folder-plus ++ /beginner/creating-a-bot ++ Creating A Bot ++
+]]
+[[ *Advanced Management*
+++  ++ /advanced/dbh-api ++ DBH API ++
+++  ++ /advanced/sharex-setup ++ ShareX Setup ++
+++  ++ /advanced/status-api ++ Status API ++ 
+]]
+[[ *Commands*
+++  ++ /commands/server/proxy ++ Server proxy ++
+]]
+[[ *Server Guides*
+++  ++ /server/intro ++ Intro ++
+{{
+[[ *Database*
+++  ++ /server/database/mongodb ++ MongoDB ++
+++  ++ /server/database/postgres ++ Postgres ++
+++  ++ /server/database/redis ++ Redis ++
+]]
+[[ *Development*
+++  ++ /server/development/aio ++ All In One ++
+++  ++ /server/development/code-server ++ Code Server ++
+++  ++ /server/development/java ++ Java ++
+++  ++ /server/development/nodejs ++ Node.js ++
+++  ++ /server/development/python ++ Python ++
+++  ++ /server/development/rdb ++ Red Discord Bot ++
+]]
+[[ *Minecraft*
+++  ++ /server/minecraft/forge ++ Forge ++
+++  ++ /server/minecraft/paper ++ Paper ++
+++  ++ /server/minecraft/spigot ++ Spigot ++
+++  ++ /server/minecraft/waterfall ++ Waterfall ++
+]]
+[[ *Software*
+++  ++ /server/software/gitea ++ Gitea ++
+++  ++ /server/software/haste ++ Haste ++
+++  ++ /server/software/sharex ++ ShareX ++
+]]
+[[ *Voice Servers*
+++  ++ /server/voice-server/mumble ++ Mumble ++
+++  ++ /server/voice-server/teamspeak3 ++ TeamSpeak 3 ++
+]]
+[[ *Web Hosting*
+++  ++ /server/web-hosting/nginx ++ Nginx ++
+}}
+]]
+}}
