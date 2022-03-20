@@ -67,7 +67,7 @@
             },
             {
                 type: 'lang',
-                regex: '\\*(.*)\\*',
+                regex: '\\+-(.*)-\\+',
                 replace: '<em>$1</em>'
             }
         ];
