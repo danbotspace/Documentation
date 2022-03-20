@@ -6,7 +6,7 @@ t{**Note**: We expect you to already know basics of coding.}
 ## Creating your bot
 Visit [Discord Developer Portal](https://discord.com/developers/applications) in order to create an application. As soon as you open `Applications` section in the sidebar you will see a cool blurple button that says `New Application`! In order to create a bot/application you have to click it and decide on a name:
 
-![Creating an application](/content/create-bot.png)
+![Creating an application](/content/new-application.png)
 
 t{**Good To Know**: You might need a cool profile picture for your bot so in order to get one click on an `App Icon` and upload the file.}
 
