@@ -4,19 +4,19 @@
 ++ fa-solid fa-book ++ /getting-started ++ Getting Started ++
 ++ fa-solid fa-cookie ++ /credits ++ Credits ++
 ]]
-[[ +-Beginner's Guidebook*
+[[ +-Beginner's Guidebook-+
 ++ fa-solid fa-plug ++ /beginner/proxying ++ Proxying ++
 ++ fa-solid fa-folder-plus ++ /beginner/creating-a-bot ++ Creating A Bot ++
 ]]
-[[ +-Advanced Management*
+[[ +-Advanced Management-+
 ++ fa-solid fa-cloud ++ /advanced/dbh-api ++ DBH API ++
 ++ fa-solid fa-print ++ /advanced/sharex-setup ++ ShareX Setup ++
 ++ fa-solid fa-heart-pulse ++ /advanced/status-api ++ Status API ++ 
 ]]
-[[ +-Commands*
+[[ +-Commands-+
 ++ fa-solid fa-link ++ /commands/server/proxy ++ Server proxy ++
 ]]
-[[ +-Server Guides*
+[[ +-Server Guides-+
 ++ fa-solid fa-comment-dots ++ /server/intro ++ Intro ++
 {{
 [[ +-Database-+
