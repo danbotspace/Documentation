@@ -12,28 +12,28 @@
   [Server proxy](/commands/server/proxy)
 * *Server Guides*
   [Intro](/server/intro)
+    * *Database*
+    [MongoDB](/server/dadatabase/mongodb)
+    [Postgres](/server/database/postgres)
+    [Redis](/server/database/redis)
     * *Development*
     [All In One](/server/development/aio)
-    [Node.js](/server/development/nodejs)
-    [Red Discord Bot](/server/development/rdb)
-    [Python](/server/development/python)
-    [Java](/server/development/java)
     [Code Server](/server/development/code-server)
-    * *Software*
-    [ShareX](/server/software/sharex)
-    [Haste](/server/software/haste)
-    [Git EA](/server/software/git-ea)
+    [Java](/server/development/java)
+    [Node.js](/server/development/nodejs)
+    [Python](/server/development/python)
+    [Red Discord Bot](/server/development/rdb)
     * *Minecraft*
+    [Forge](/server/minecraft/forge)
     [Paper](/server/minecraft/paper)
     [Spigot](/server/minecraft/spigot)
-    [Forge](/server/minecraft/forge)
     [Waterfall](/server/minecraft/waterfall)
-    * *Database*
-    [Mongo DB](/server/dadatabase/mongodb)
-    [Redis](/server/database/redis)
-    [Postgres](/server/database/postgres)
+    * *Software*
+    [Gitea](/server/software/gitea)
+    [Haste](/server/software/haste)
+    [ShareX](/server/software/sharex)
     * *Voice Servers*
-    [TS3](/server/voice-server/ts3)
     [Mumble](/server/voice-server/mumble)
-    * *Website*
-    [Nginx](/server/website/nginx)
+    [TeamSpeak 3](/server/voice-server/teamspeak3)
+    * *Web Hosting*
+    [Nginx](/server/web-hosting/nginx)
