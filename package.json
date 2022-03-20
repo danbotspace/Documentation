@@ -10,6 +10,7 @@
     "figlet": "^1.5.2",
     "nodemon": "^2.0.15",
     "serve-favicon": "^2.5.0",
-    "showdown": "^2.0.3"
+    "showdown": "^2.0.3",
+    "showdown-highlight": "^3.0.0"
   }
 }
