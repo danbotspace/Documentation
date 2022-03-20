@@ -13,7 +13,7 @@
 * *Server Guides*
   [Intro](/server/intro)
     * *Database*
-    [MongoDB](/server/dadatabase/mongodb)
+    [MongoDB](/server/database/mongodb)
     [Postgres](/server/database/postgres)
     [Redis](/server/database/redis)
     * *Development*
