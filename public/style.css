@@ -138,10 +138,13 @@ body {
     visibility: hidden;
     opacity: 0;
 }
+.items i {
+    margin-right: 8px;
+}
 .items a, .items li em {
     cursor: pointer;
     font-style: normal;
-	color: #fff;
+    color: #fff;
     background-color: #2c2c31;
     text-decoration: none;
     transition: all ease-in-out .12s;
