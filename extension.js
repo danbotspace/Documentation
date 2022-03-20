@@ -38,6 +38,37 @@
                         return text;
                     }
                 }
+            },
+            // Menu syntax
+            {
+                type: 'lang',
+                regex: '\\+\\+ (.*) \\+\\+ (.*) \\+\\+ (.*) \\+\\+',
+                replace: '<a href="$2"><i class="$1"></i>$3</a>'
+            },
+            {
+                type: 'lang',
+                regex: '{{',
+                replace: '<ul>'
+            },
+            {
+                type: 'lang',
+                regex: '}}',
+                replace: '</ul>'
+            },
+            {
+                type: 'lang',
+                regex: '\\[\\[',
+                replace: '<li>'
+            },
+            {
+                type: 'lang',
+                regex: '\\]\\]',
+                replace: '</li>'
+            },
+            {
+                type: 'lang',
+                regex: '\\*(.*)\\*',
+                replace: '<em>$1</em>'
             }
         ];
     });
