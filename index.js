@@ -6,7 +6,8 @@ const express = require('express'),
       fs = require('fs'),
       path = require('path'),
       rateLimit = require('express-rate-limit'),
-      showdown  = require('showdown');
+      showdown  = require('showdown'),
+      showdownHighlight = require("showdown-highlight");
 
 // Selfmade extension(will be moved soon)
 showdown.extension("Docs", function() {
@@ -51,7 +52,7 @@ const converter = new showdown.Converter({
           strikethrough: 'true',
           underline: 'true',
           disableForced4SpacesIndentedSublists: 'true',
-          extensions: ['Docs']
+          extensions: ['Docs', showdownHighlight({ pre: true })]
 });
 
 // Ratelimiting
