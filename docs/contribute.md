@@ -4,7 +4,7 @@ Firstly run the commands to install DBH-Docs to your local machine.
 
 # Git clone
 
-```
+```text
 git clone https://github.com/DBH-Docs/Documentation
 ```
 
@@ -16,11 +16,11 @@ After that. Start editing the code
 
 There are some extra markdown widgets that can make your page look cooler they are as below:
 
-```
+```text
 PAGE: p{link} text goes here
 ```
 
-```
+```text
 TIP: t{text goes here}
 ```
 
@@ -34,7 +34,7 @@ p{https://github.com/DBH-Docs/Documentation/blob/main/docs/markdown.md} GitHub: 
 
 Make sure after you make edits you go into /layout/summary.md and edit it to add your edited documents in it. An example is below. Can't figure out? Checkout `/layout/summary.md` for more examples or create a issue for help:
 
-```
+```text
     * *Category name*
     [Documentation name](/path/to/docs)
 ```
