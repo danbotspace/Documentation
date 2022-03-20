@@ -235,6 +235,9 @@ body {
 .content {
     color: #fff;
 }
+.content p {
+    color: #d0d0d4;
+}
 .content > pre, code {
 	border: 1px solid #36363b;
     background-color: #333338;
