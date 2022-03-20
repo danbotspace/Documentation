@@ -24,6 +24,11 @@ There are some extra markdown widgets that can make your page look cooler they a
 
 `t{text goes here}`
 
+To see all markdown expressions head to these pages:
+
+p{/markdown} Origin: Markdown
+p{https://github.com/DBH-Docs/Documentation/blob/main/docs/markdown.md} GitHub: Markdown
+
 # Requirements
 
 Make sure after you make edits you go into /layout/summary.md and edit it to add your edited documents in it. An example is below. Can't figure out? Checkout `/layout/summary.md` for more examples or create a issue for help:
