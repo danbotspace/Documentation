@@ -111,6 +111,7 @@ body {
     scrollbar-width: thin;
     overflow-y: scroll;
     user-select: none;
+    padding-bottom: 30px;
     direction: rtl;
 }
 .sidebar::-webkit-scrollbar {
@@ -352,7 +353,7 @@ tip:before {
     .sidebar {
         position: fixed;
         top: 0;
-        bottom: 0;
+        box-sizing: border-box;
         z-index: 1;
     }
     .fa-bars {
