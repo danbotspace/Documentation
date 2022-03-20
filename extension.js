@@ -26,26 +26,16 @@
         let page = new RegExp('p\{(.*)\} (.*)');
         let tip = new RegExp('t\{(.*)\}');
         return [
-            // Page syntax
+            // listeners
             {
                 type: 'listener',
                 listeners: {
-                    'italicsAndBold.after': function (event, text, options, globals) {
-                        return text.replace(tip, function (match, p1, offset, string) {
-                            return '<tip><f>' + p1 + '</f></tip>';
-                        });
-                    }
-                }
-            },
-
-            // Tip syntax
-            {
-                type: 'listener',
-                listeners: {
-                    'italicsAndBold.after': function (event, text, options, globals) {
-                        return text.replace(page, function (match, p1, p2, offset, string) {
-                        return '<a href="' + p1 + '" class="page">' + p2 + '</a>';
-                        });
+                    'codeBlocks.after': function (event, text, options, globals) {
+                        // Tip syntax
+                        text = text.replace(tip, '<tip><f>$1</f></tip>');
+                        // Page syntax
+                        text = text.replace(page, '<a href="$1" class="page">$2</a>');
+                        return text;
                     }
                 }
             }
