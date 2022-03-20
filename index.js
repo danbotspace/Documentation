@@ -6,29 +6,52 @@ const express = require('express'),
       fs = require('fs'),
       path = require('path'),
       rateLimit = require('express-rate-limit'),
-      showdown  = require('showdown'),
-      converter = new showdown.Converter({strikethrough: 'true', underline: 'true', disableForced4SpacesIndentedSublists: 'true'});
+      showdown  = require('showdown');
 
-// Declare extension
+// Selfmade extension(will be moved soon)
 showdown.extension("Docs", function() {
-  return [
-    {
-      type: 'lang',
-      regex: 'p\{(.*)\} (.*)',
-      replace: function(text, leadingSlash, match) {
-          match = text.match('p\{(.*)\} (.*)')
-          return '<a href="' + match[1] + '" class="page">' + match[2] + '</a>';
-      }
-    },
-    {
-      type: 'lang',
-      regex: 't\{(.*)\}',
-      replace: function(text, leadingSlash, match) {
-          match = text.match('t\{(.*)\}')
-          return '<tip><f>' + match[1] + '</f></tip>';
-      }
-    }
-  ]
+    let page = new RegExp('p\{(.*)\} (.*)');
+    let tip = new RegExp('t\{(.*)\}');
+    return [
+        /*{
+            type: 'lang',
+            regex: page,
+            replace: '<a href="$1" class="page">$2</a>'
+        },
+        {
+            type: 'lang',
+            regex: tip,
+            replace: '<tip><f>$1</f></tip>'
+        },*/
+        {
+            type: 'listener',
+            listeners: {
+                'italicsAndBold.after': function (event, text, options, globals) {
+                    return text.replace(tip, function (match, p1, offset, string) {
+                        return '<tip><f>' + p1 + '</f></tip>';
+                    });
+                }
+            }
+        },
+        {
+            type: 'listener',
+            listeners: {
+                'italicsAndBold.after': function (event, text, options, globals) {
+                    return text.replace(page, function (match, p1, p2, offset, string) {
+                        return '<a href="' + p1 + '" class="page">' + p2 + '</a>';
+                    });
+                }
+            }
+        }
+    ]
+});
+
+// Defining converter with options
+const converter = new showdown.Converter({
+          strikethrough: 'true',
+          underline: 'true',
+          disableForced4SpacesIndentedSublists: 'true',
+          extensions: ['Docs']
 });
 
 // Ratelimiting
@@ -41,7 +64,6 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use(favicon(__dirname + '/public/dbh-docs.ico'));
 app.use(express.static(path.join(__dirname, "public")));
-converter.useExtension("Docs"); /* Add an extension to converter */
 
 app.set('view engine', 'ejs');
 app.get('*', (req, res) => {
