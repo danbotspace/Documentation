@@ -30,7 +30,7 @@
             {
                 type: 'listener',
                 listeners: {
-                    'codeBlocks.after': function (event, text, options, globals) {
+                    'italicsAndBold.after': function (event, text, options, globals) {
                         // Tip syntax
                         text = text.replace(tip, '<tip><f>$1</f></tip>');
                         // Page syntax
