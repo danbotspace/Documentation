@@ -80,7 +80,7 @@ body {
     color: #fff;
     font-size: 13px;
 }
-.footer i {
+.footer i, user i {
     padding: 10px;
     font-size: 20px;
     color: #fff;
@@ -329,6 +329,40 @@ tip:before {
     float: left;
 }
 
+user {
+    display: block;
+    border: 1px solid #36363b;
+    background-color: #333338;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 20px;
+    color: #fff;
+    margin: 15px;
+}
+user img {
+    width: 80px;
+    height: 80px;
+    margin: 0 12px 0 0 !important;
+    float: left;
+    border-radius: 10px;
+}
+user span {
+    font-size: 14px;
+    color: #d9d9df;
+    margin: 5px 0;
+    word-break: break-word;
+}
+user t {
+    display: flex;
+    flex-direction: column;
+}
+user i {
+    margin-left: 5px;
+}
+user i:hover {
+    background-color: #484850;
+}
+
 /* --- MOBILE --- */
 @media screen and (max-width: 1250px) {
     /* --- HEADER --- */
@@ -371,5 +405,11 @@ tip:before {
         width: unset;
         margin: 90px auto 0 auto;
         min-height: calc(100vh - 200px);
+    }
+    
+    /* --- WIDGETS --- */
+    user img {
+    	width: 60px;
+    	height: 60px;
     }
 }
