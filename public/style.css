@@ -124,9 +124,6 @@ body {
 .sidebar::-webkit-scrollbar-track {
     background-color: #2c2c31;
 }
-.sidebar.unwrap {
-    width: 0;
-}
 .items {
     list-style-type: none;
     line-height: 16px;
@@ -401,6 +398,12 @@ copy f.active {
 
 /* --- MOBILE --- */
 @media screen and (max-width: 1250px) {
+    /* --- BASE --- */
+    body.unwrap {
+        height: 100%;
+        overflow-y: hidden;
+    }
+    
     /* --- HEADER --- */
     .header {
         padding: 0 2%;
@@ -427,13 +430,31 @@ copy f.active {
         position: fixed;
         top: 0;
         box-sizing: border-box;
-        z-index: 1;
+        z-index: 2;
+        box-shadow: 0 0 20px #151515;
+    }
+    .sidebar.unwrap {
+        box-shadow: none;
+        width: 0;
     }
     .fa-bars {
         visibility: visible;
     }
     .logo-container {
         height: 80px;
+    }
+    .shadow {
+    	position: fixed;
+    	width: 100vw;
+    	height: 100vh;
+    	opacity: .5;
+    	background-color: #000;
+    	transition: visibility .5s, opacity .5s ease-in-out;
+    	z-index: 1;
+    }
+    .shadow.unwrap {
+    	visibility: hidden;
+    	opacity: 0;
     }
 
     /* --- CONTENT --- */
