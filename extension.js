@@ -4,6 +4,7 @@
  * Usage:
  * p{link} page name                      ->  <a href="link" class="page">page name</a>
  * t{**Note/Good To Know/etc**: text}     ->  <tip><f>**Note/Good To Know/etc**: text</f></tip>
+ * ??text??                               ->  <copy>text<f>Copied!</></copy>
  * u{                                     ->  <user> ...
  * 'card': 'link';                        ->  <f> ... <a href="link" class="card"><i class="fa-solid fa-address-card"></i></a>
  * 'desc': 'what you did to the project'; ->  <span>what you did to the project</span>
@@ -79,6 +80,7 @@
                 regex: '\\+-(.*)-\\+',
                 replace: '<em>$1</em>'
             },
+            // User card syntax
             {
                 type: 'lang',
                 regex: user,
@@ -92,6 +94,12 @@
                     let ptwitter = (!twitter) ? '' : `<a href="https://twitter.com/${twitter}" class="github"><i class="fa-brands fa-twitter"></i></a>`;
                     return '<user>' + ppfp + '<t>' + name + pdesc + '<f>' + pcard + pgithub + ptwitter + '</f></t></user>';
                 }
+            },
+            // Copy syntax
+            {
+                type: 'lang',
+                regex: '\\?\\?(.*)\\?\\?',
+                replace: '<copy>$1<f>Copied!</f></copy>'
             }
         ];
     });
