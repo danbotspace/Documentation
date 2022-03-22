@@ -1,13 +1,84 @@
 # Credits
 
-Everyone who somehow helped this [project](https://help.dbh.wtf). Big thanks to:
-* [@Dan | DBH#9700](https://discord.com/users/137624084572798976) for founding of DBH
-* [@Freddie#4013](https://discord.com/users/193782837604909056) for developing DBH
-* [@Jamie_#0001](https://discord.com/users/526849883559165984) for developing DBH
-* [@Artiom#0001](https://discord.com/users/918137699842555964) for giving domain and creating a bot
-* [@Domin#2874](https://discord.com/users/418306434317680641) for making pages/tutorials and the website from scratch
-* [@OmxproYT#1165](https://discord.com/users/248470317540966443) for making pages/tutorials and suggesting great ideas
-* [@jeweetzelf#5684](https://discord.com/users/695580369281482842) for making pages/tutorials and suggesting great ideas
-* [@migue802#6690](https://discord.com/users/337182695723630593) for making pages/tutorials
-* [@! djoh#2071](https://discord.com/users/419892040726347776) for contribution to the creation of a bot
-* @everyone for being a part of DBH
+### Thanks to everyone who somehow helped this [project](https://help.dbh.wtf):
+
+u{
+'card': 'https://domin.is-a.dev/';
+'desc': 'A fullstack developer who designed, automated and made the script for the website.';
+'github': 'Domin-MND';
+'name': 'Domin';
+'pfp': '//cdn.discordapp.com/avatars/418306434317680641/c4e25d827eb5a88b5191a2ea97bd5544?size=512';
+'twitter': 'Dominiff';
+}
+
+u{
+'card': '';
+'desc': 'The one who made pages, suggested great ideas and managed documentation.';
+'github': 'omxpro';
+'name': 'Omxpro';
+'pfp': '//cdn.discordapp.com/avatars/248470317540966443/9b6b0df02be56630e73751698a3980a6?size=512';
+'twitter': '';
+}
+
+u{
+'card': '';
+'desc': 'A good guy who made pages and suggested great ideas.';
+'github': 'jeweetzelfWasTaken';
+'name': 'jeweetzelf';
+'pfp': '//cdn.discordapp.com/avatars/695580369281482842/b07819e31ad6b0138681bb6afab87918?size=512';
+'twitter': '';
+}
+
+u{
+'card': 'https://www.migue802.ml/';
+'desc': 'A great contributor and fond of this project who made tutorials.';
+'github': 'migue802';
+'name': 'migue802 ';
+'pfp': '//cdn.discordapp.com/avatars/337182695723630593/a_9ab744c62f2c491ac579a40420aa653d?size=512';
+'twitter': '';
+}
+
+u{
+'card': '';
+'desc': 'A magic man that contributed to the creation of a bot.';
+'github': 'itzJOHv';
+'name': 'Joh';
+'pfp': '//cdn.discordapp.com/avatars/419892040726347776/71d9bc77022af6fcc09cff49de98df70?size=512';
+'twitter': '';
+}
+
+u{
+'card': '';
+'desc': 'Domain provider and one of the bot creators.';
+'github': 'JustArtiom';
+'name': 'Artiom';
+'pfp': '//avatars.githubusercontent.com/u/83312438';
+'twitter': '';
+}
+
+u{
+'card': '';
+'desc': 'An owner and founder of the DBH';
+'github': 'danielpmc';
+'name': 'Dan';
+'pfp': '//avatars.githubusercontent.com/u/13561350';
+'twitter': '';
+}
+
+u{
+'card': '';
+'desc': 'A good developer of DBH';
+'github': 'freddierick';
+'name': 'Freddy';
+'pfp': '//cdn.discordapp.com/avatars/193782837604909056/db42cf50d04e7958ae1e33b319eb67be?size=512';
+'twitter': 'wrenfreddie';
+}
+
+u{
+'card': '';
+'desc': 'An another developer of DBH and a nice guy.';
+'github': 'JamieGrimwood';
+'name': 'Jamie';
+'pfp': '//avatars.githubusercontent.com/u/59361355';
+'twitter': '';
+}
