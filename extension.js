@@ -1,9 +1,17 @@
-/**
+/*
  * DBH Docs extension
- * Supports various widgets related to pages and menu
+ * Supports various widgets related to pages and sidebar
  * Usage:
- * p{link} page name                     ->  <a href="link" class="page">page name</a>
- * t{**Note/Good To Know/etc**: text}    ->  <tip><f>**Note/Good To Know/etc**: text</f></tip>
+ * p{link} page name                      ->  <a href="link" class="page">page name</a>
+ * t{**Note/Good To Know/etc**: text}     ->  <tip><f>**Note/Good To Know/etc**: text</f></tip>
+ * u{                                     ->  <user> ...
+ * 'card': 'link';                        ->  <f> ... <a href="link" class="card"><i class="fa-solid fa-address-card"></i></a>
+ * 'desc': 'what you did to the project'; ->  <span>what you did to the project</span>
+ * 'github': 'github name';               ->  <a href="https://github.com/github name" class="github"><i class="fa-brands fa-github"></i></a>
+ * 'name': 'your name';                   ->  name
+ * 'pfp': 'link';                         ->  <img src="link"> ... <t> ...
+ * 'twitter': 'twitter name';             ->  <a href="https://twitter.com/twitter name" class="github"><i class="fa-brands fa-twitter"></i></a>
+ * }                                      ->  ... </f></t></user>
  */
 (function (extension) {
     'use strict';
@@ -25,6 +33,7 @@
     showdown.extension('showdownDBH', function () {
         let page = new RegExp('p\{(.*)\} (.*)');
         let tip = new RegExp('t\{(.*)\}');
+        let user = new RegExp("u{\n(?:'card': '(.*)';\n|.*\n)?(?:'desc': '(.*)';\n|.*\n)?(?:'github': '(.*)';\n|.*\n)?(?:'name': '(.*)';\n|.*\n)?(?:'pfp': '(.*)';\n|.*\n)?(?:'twitter': '(.*)';\n|.*)?}", 'gm')
         return [
             // listeners
             {
@@ -69,6 +78,20 @@
                 type: 'lang',
                 regex: '\\+-(.*)-\\+',
                 replace: '<em>$1</em>'
+            },
+            {
+                type: 'lang',
+                regex: user,
+                replace: function (match, card, desc, github, name, pfp, twitter, offset, text) {
+                    // If pfp field empty parse nothing
+                    // alphabet order only!
+                    let ppfp = (!pfp) ? '' : `<img src="${pfp}">`;
+                    let pdesc = (!desc) ? '' : `<span>${desc}</span>`;
+                    let pcard = (!card) ? '' : `<a href="${card}" class="card"><i class="fa-solid fa-address-card"></i></a>`;
+                    let pgithub = (!github) ? '' : `<a href="https://github.com/${github}" class="github"><i class="fa-brands fa-github"></i></a>`;
+                    let ptwitter = (!twitter) ? '' : `<a href="https://twitter.com/${twitter}" class="github"><i class="fa-brands fa-twitter"></i></a>`;
+                    return '<user>' + ppfp + '<t>' + name + pdesc + '<f>' + pcard + pgithub + ptwitter + '</f></t></user>';
+                }
             }
         ];
     });
