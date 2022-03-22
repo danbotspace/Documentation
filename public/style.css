@@ -80,7 +80,7 @@ body {
     color: #fff;
     font-size: 13px;
 }
-.footer i, user i {
+.footer i, user i, copy i:before {
     padding: 10px;
     font-size: 20px;
     color: #fff;
@@ -93,7 +93,7 @@ body {
 .footer div:last-child {
     margin-right: 5px;
 }
-.footer i:hover {
+.footer i:hover, copy i:hover:before {
     background-color: #36363a;
 }
 
@@ -361,6 +361,41 @@ user i {
 }
 user i:hover {
     background-color: #484850;
+}
+
+copy:before {
+    display: inline-block;
+    font: var(--fa-font-solid);
+    content: "\f0c5";
+    min-width: 22px;
+    font-size: 16px;
+    color: #fff;
+}
+copy:hover {
+    background-color: #36363a;
+}
+copy {
+    transition: all ease-in-out .12s;
+    display: inline-block;
+    position: relative;
+    margin: 8px 10px;
+    padding: 13px;
+    border-radius: 4px;
+    user-select: none;
+}
+copy f {
+    position: absolute;
+    padding: 13px;
+    border-radius: 4px;
+    background-color: #242428;
+    top: -50%;
+    left: 0;
+    opacity: 0;
+    transition: all ease-in-out .12s;
+}
+copy f.active {
+    transition: all ease-in-out .12s;
+    opacity: 0.8;
 }
 
 /* --- MOBILE --- */
