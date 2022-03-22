@@ -132,10 +132,6 @@ body {
     opacity: 1;
     transition: visibility .5s, opacity .5s ease-in-out;
 }
-.items.unwrap {
-    visibility: hidden;
-    opacity: 0;
-}
 .items i {
     margin-right: 8px;
 }
@@ -204,10 +200,6 @@ body {
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-}
-.logo-container.unwrap {
-    opacity: 0;
-    visibility: hidden;
 }
 
 /* --- CONTENT --- */
@@ -442,6 +434,14 @@ copy f.active {
     }
     .logo-container {
         height: 80px;
+    }
+    .logo-container.unwrap {
+    	opacity: 0;
+    	visibility: hidden;
+    }
+    .items.unwrap {
+    	visibility: hidden;
+    	opacity: 0;
     }
     .shadow {
     	position: fixed;
