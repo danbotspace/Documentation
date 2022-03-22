@@ -36,4 +36,15 @@ t{**Note**: Bears have excellent senses of smell, sight and hearing...}
 
 p{/} You shouldn't be here!
 
+Find out who made this page:
+
+u{
+'card': 'https://domin.is-a.dev/';
+'desc': 'A fullstack developer who designed, automated and made the script for the website.';
+'github': 'Domin-MND';
+'name': 'Domin';
+'pfp': '//cdn.discordapp.com/avatars/418306434317680641/c4e25d827eb5a88b5191a2ea97bd5544?size=512';
+'twitter': 'Dominiff';
+}
+
 The end ...
