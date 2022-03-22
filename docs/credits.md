@@ -42,9 +42,9 @@ u{
 'card': '';
 'desc': 'A magic man that contributed to the creation of a bot.';
 'github': 'itzJOHv';
-'name': 'Joh';
+'name': 'djoh';
 'pfp': '//cdn.discordapp.com/avatars/419892040726347776/71d9bc77022af6fcc09cff49de98df70?size=512';
-'twitter': '';
+'twitter': 'djohwtf';
 }
 
 u{
