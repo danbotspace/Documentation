@@ -31,8 +31,8 @@
 }(function (showdown) {
     'use strict';
     showdown.extension('showdownDBH', function () {
-        let page = new RegExp('p\{(.*)\} (.*)');
-        let tip = new RegExp('t\{(.*)\}');
+        let page = new RegExp('p{(.*)} (.*)');
+        let tip = new RegExp('t{(.*)}');
         let user = new RegExp("u{\n(?:'card': '(.*)';\n|.*\n)?(?:'desc': '(.*)';\n|.*\n)?(?:'github': '(.*)';\n|.*\n)?(?:'name': '(.*)';\n|.*\n)?(?:'pfp': '(.*)';\n|.*\n)?(?:'twitter': '(.*)';\n|.*)?}", 'gm')
         return [
             // listeners
