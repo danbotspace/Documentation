@@ -1,6 +1,8 @@
 /* --- BASE --- */
 body {
     display: flex;
+    height: auto;
+    overflow-y: auto;
 }
 :root {
     font-family: 'Varela Round', sans-serif;
@@ -405,7 +407,7 @@ copy f.active {
     }
     .header-links a {
         padding: 0 15px;
-	    font-size: 12px;
+	font-size: 12px;
     }
 
     /* --- FOOTER --- */
