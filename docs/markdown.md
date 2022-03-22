@@ -37,6 +37,7 @@ t{**Note**: Bears have excellent senses of smell, sight and hearing...}
 p{/} You shouldn't be here!
 
 ??In this case you might need an axe, here take!??
+??Oh and I forgor to gib you this sword... It's too late...??
 
 Find out who made this page:
 
