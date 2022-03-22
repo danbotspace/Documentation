@@ -1,8 +1,6 @@
 /* --- BASE --- */
 body {
     display: flex;
-    height: auto;
-    overflow-y: auto;
 }
 :root {
     font-family: 'Varela Round', sans-serif;
@@ -393,9 +391,13 @@ copy f.active {
 /* --- MOBILE --- */
 @media screen and (max-width: 1250px) {
     /* --- BASE --- */
-    body.unwrap {
-        height: 100%;
+    body {
+	height: 100%;
         overflow-y: hidden;
+    }
+    body.unwrap {
+        height: auto;
+        overflow-y: auto;
     }
     
     /* --- HEADER --- */
