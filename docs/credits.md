@@ -26,7 +26,7 @@ u{
 'github': 'jeweetzelfWasTaken';
 'name': 'jeweetzelf';
 'pfp': '//cdn.discordapp.com/avatars/695580369281482842/b07819e31ad6b0138681bb6afab87918?size=512';
-'twitter': '';
+'twitter': 'jeweetzelfWasTaken';
 }
 
 u{
