@@ -61,7 +61,7 @@ $('.items li em').on('click', function() {
 let self = $(this).parent();
 self.toggleClass('expand');
 $(this).toggleClass('expand');
-})
+});
 if (window.matchMedia('screen and (max-width: 1250px)').matches) {
 $('.sidebar, .items, .logo-container').addClass('unwrap');
 }
@@ -76,6 +76,18 @@ $(this).addClass('active');
 $(this).parents('li').addClass('expand');
 $(this).parents('li').children('em').addClass('expand');
 }
+});
+$('copy').on('click', function() {
+let $temp = $("<input>");
+let copied = $(this).children();
+$("body").append($temp);
+$temp.val($(this).clone().children().remove().end().text()).select();
+document.execCommand("copy");
+$temp.remove();
+copied.addClass('active');
+setTimeout(function() {
+copied.removeClass('active');
+}, 2000);
 });
 </script>
 </html>
