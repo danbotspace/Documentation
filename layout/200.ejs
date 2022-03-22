@@ -19,7 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>DBH Docs</title>
 </head>
-<body>
+<body class="unwrap">
     <nav class="sidebar">
         <div class="logo-container">
             <img src="/dbh-docs.png" alt="DBH Docs" width="512" height="512">Docs
@@ -29,6 +29,7 @@
         </div>
     </nav>
     <div class="wrapper">
+        <div class="shadow"></div>
         <nav class="header">
             <div class="hamburger">
                 <i class="fa-solid fa-bars"></i>
@@ -54,8 +55,9 @@
     </div>
 </body>
 <script>
+let mobile = $('.sidebar, .items, .logo-container, .shadow, body')
 $('.fa-bars').on('click', function() {
-$('.sidebar, .items, .logo-container').toggleClass('unwrap')
+mobile.toggleClass('unwrap')
 });
 $('.items li em').on('click', function() {
 let self = $(this).parent();
@@ -63,11 +65,11 @@ self.toggleClass('expand');
 $(this).toggleClass('expand');
 });
 if (window.matchMedia('screen and (max-width: 1250px)').matches) {
-$('.sidebar, .items, .logo-container').addClass('unwrap');
+mobile.toggleClass('unwrap');
 }
-$('.content').on('click', function() {
+$('.shadow').on('click', function() {
 if (window.matchMedia('screen and (max-width: 1250px)').matches) {
-$('.sidebar, .items, .logo-container').addClass('unwrap');
+mobile.toggleClass('unwrap');
 }
 })
 $('.header [href], .sidebar [href]').each(function() {
