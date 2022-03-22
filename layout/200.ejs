@@ -68,9 +68,7 @@ if (window.matchMedia('screen and (max-width: 1250px)').matches) {
 mobile.toggleClass('unwrap');
 }
 $('.shadow').on('click', function() {
-if (window.matchMedia('screen and (max-width: 1250px)').matches) {
-mobile.toggleClass('unwrap');
-}
+mobile.removeClass('unwrap');
 })
 $('.header [href], .sidebar [href]').each(function() {
 if (this.href == window.location.href) {
