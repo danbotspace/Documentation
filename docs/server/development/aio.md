@@ -14,7 +14,7 @@ p{https://en.wikipedia.org/wiki/Bash_(Unix_shell)} Source: Wikipedia
 
 There is a way to launch the language on startup. You just have to create a .sh file e.g. `start.sh` where your commands will be stored. New line may stands for a new command so you just have to implement as many commands as you want:
 
-![start.sh])(/content/aio/start.sh.png)
+![start.sh](/content/aio/start.sh.png)
 
 After that you must change your startup command to `bash [your_file_name].sh` or in my case to `bash start.sh`.
 
