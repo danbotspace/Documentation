@@ -23,6 +23,8 @@ There after clicking "Add record" you have to fill all fields as in the image:
 
 ![Fill given fields](/content/proxy-fields.png)
 
+Consider adding this IP ??164.132.74.251??
+
 t{**Note**: if you're using cloudflare consider turning off "Proxy Status".}
 
 After everything is done click "Save" and head to discord!
