@@ -19,6 +19,10 @@ app.use(require('compression')());
 app.use(require('serve-favicon')(__dirname + '/public/dbh-docs.ico'));
 app.use(express.static(path.join(__dirname, "public")));
 app.set('view engine', 'ejs');
+app.set(function(req, res, next){
+    res.header('Cache-Control', 'max-age=2592000');
+    next();
+});
 
 // Each request reads for markdown file in docs folder.
 // Converts md to html to respond with proper format.
@@ -36,6 +40,7 @@ app.get('*', (req, res) => {
         fs.readFile(__dirname + '/layout/summary.md', 'utf8' , (err, data) => {
     		if (err) res.send({error: 'Menu items are broken!'})
         	let items = converter.makeHtml(data);
+            // Override 'Expires' for certain browsers
             res.render(__dirname + '/layout/200', {content:converted, menu:items, metaDescription:description});
     	});
     });
