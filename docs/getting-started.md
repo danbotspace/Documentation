@@ -17,7 +17,8 @@ Do `DBH!user link` to link your account. As in the previous step, follow the bot
 # Create your first server.
 
 Before checking [panel](https://panel.danbot.host/) create your first server using the same bot. You have to execute `DBH!create server <server type> <server name>` to create it. To find out all server types simply do `DBH!server create list`, it will let you know all available server types!
-> **Good to know**: You can leave server name blank if you can't decide on a name! Soon on the panel you will be able to change the name.
+
+t{**Good to know**: You can leave server name blank if you can't decide on a name! Soon on the panel you will be able to change the name.}
 
 ## Want to delete it?
 
