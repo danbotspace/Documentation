@@ -372,6 +372,7 @@ copy {
     padding: 13px;
     border-radius: 4px;
     user-select: none;
+    cursor: pointer;
 }
 copy f {
     position: absolute;
