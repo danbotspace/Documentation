@@ -1,0 +1,7 @@
+??.??.21
+
+# RedDiscordBot egg does not work
+
+Many people report an issue with RDB egg. Most of these reports are about starting a server. A likely solution is to add config file which being not found after clear starting the server.
+
+t{**Status**: Resolved}
