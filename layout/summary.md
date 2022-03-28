@@ -3,6 +3,7 @@
 ++ fa-solid fa-door-open ++ /introduction ++ Introduction ++
 ++ fa-solid fa-book ++ /getting-started ++ Getting Started ++
 ++ fa-solid fa-cookie ++ /credits ++ Credits ++
+++ fa-solid fa-bug ++ /issue-tracker/ ++ Issue Tracker ++
 ]]
 [[ +-Beginner's Guidebook-+
 ++ fa-solid fa-plug ++ /beginner/proxying ++ Proxying ++

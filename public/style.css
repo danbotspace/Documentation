@@ -272,6 +272,36 @@ body {
 	padding-left: 10px;
 	margin: 5px 0;
 }
+.content hr {
+    border: 0;
+    background-color: #313135;
+    height: 2px;
+    margin: 15px 5px;
+}
+.content .issue-tracker {
+    list-style: none;
+}
+.content btn {
+    display: flex;
+    width: fit-content;
+    border: 1px solid #36363b;
+    background-color: #333338;
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: all ease-in-out .05s;
+}
+.content btn:hover {
+    background-color: #4b4b53;
+    border: 1px solid #4f4f58;
+    transition: all ease-in-out .05s;
+}
+.content btn:active {
+    border: 1px solid #646472;
+    background-color: #4b4b53;
+}
 
 /* --- WIDGETS --- */
 .page {

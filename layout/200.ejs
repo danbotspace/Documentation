@@ -6,9 +6,10 @@
     <meta property="og:title" content="DBH Docs" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://help.dbh.wtf/" />
-    <meta property="og:image" content="/dbh-docs.png" />
+    <meta property="og:image" content="/docs-embed.png" />
     <meta property="og:description" content="<%= metaDescription %>" />
-    <meta name="theme-color" content="#5865f2">
+    <meta name="theme-color" content="#728ad8">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"/>
@@ -55,39 +56,58 @@
     </div>
 </body>
 <script>
-let mobile = $('.sidebar, .items, .logo-container, .shadow, body')
+// Mobile hamburger
+mobile = $('.sidebar, .items, .logo-container, .shadow, body')
 $('.fa-bars').on('click', function() {
-mobile.toggleClass('unwrap')
+    mobile.toggleClass('unwrap')
 });
+
+// Category expanding
 $('.items li em').on('click', function() {
-let self = $(this).parent();
-self.toggleClass('expand');
-$(this).toggleClass('expand');
+    self = $(this).parent();
+    self.toggleClass('expand');
+    $(this).toggleClass('expand');
 });
-if (window.matchMedia('screen and (max-width: 1250px)').matches) {
-mobile.toggleClass('unwrap');
-}
+
+// Mobile shadow + unwrap on load
+if (window.matchMedia('screen and (max-width: 1250px)').matches) mobile.toggleClass('unwrap');
 $('.shadow').on('click', function() {
-mobile.addClass('unwrap');
-})
-$('.header [href], .sidebar [href]').each(function() {
-if (this.href == window.location.href) {
-$(this).addClass('active');
-$(this).parents('li').addClass('expand');
-$(this).parents('li').children('em').addClass('expand');
-}
+    mobile.addClass('unwrap');
 });
+
+// Highlighting active page in header/sidebar
+$('.header [href], .sidebar [href]').each(function() {
+    if (this.href != window.location.href) return;
+    $(this).addClass('active');
+    $(this).parents('li').addClass('expand');
+    $(this).parents('li').children('em').addClass('expand');
+});
+
+// Copy widget + pop-up
 $('copy').on('click', function() {
-let $temp = $("<input>");
-let copied = $(this).children();
-$("body").append($temp);
-$temp.val($(this).clone().children().remove().end().text()).select();
-document.execCommand("copy");
-$temp.remove();
-copied.addClass('active');
-setTimeout(function() {
-copied.removeClass('active');
-}, 2000);
+    $temp = $("<input>");
+    copied = $(this).children();
+    $("body").append($temp);
+    $temp.val($(this).clone().children().remove().end().text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+    copied.addClass('active');
+    setTimeout(function() {
+        copied.removeClass('active');
+    }, 2000);
+});
+
+// Issue tracker handler
+issue_tracker = $('.issue-tracker li');
+issue_tracker.hide();
+posts = issue_tracker.length;
+load = 5; // Amount of posts loaded
+if (load >= posts) $('.content btn').hide();
+issue_tracker.slice(0, load).show();
+$('.content btn').on('click', function() {
+    load = (load + 5 <= posts) ? load + 5 : posts;
+    issue_tracker.slice(0, load).show();
+    if (load >= posts) $(this).hide();
 });
 </script>
 </html>
