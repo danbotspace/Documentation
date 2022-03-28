@@ -75,7 +75,7 @@ u{
 }
 
 u{
-'card': 'https://jmgcoding.com/';
+'card': '';
 'desc': 'An another developer of DBH and a nice guy.';
 'github': 'JamieGrimwood';
 'name': 'Jamie';
