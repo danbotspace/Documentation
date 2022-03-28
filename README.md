@@ -1,5 +1,5 @@
-Code Status:
 [![CodeQL](https://github.com/DBH-Docs/Documentation/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/DBH-Docs/Documentation/actions/workflows/codeql-analysis.yml)
+![Uptime Robot](https://img.shields.io/uptimerobot/ratio/7/m791196662-886d8c1e6daa59cabb81d614)
 
 # DanBot Hosting Documentation
 
