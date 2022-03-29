@@ -30,6 +30,7 @@ body {
 /* --- HEADER --- */
 .header {
     display: flex;
+    z-index: 1;
     align-items: center;
     background-color: #27272b;
     justify-content: space-between;
@@ -481,7 +482,7 @@ copy f.active {
         position: fixed;
         top: 0;
         box-sizing: border-box;
-        z-index: 2;
+        z-index: 3;
         box-shadow: 0 0 20px #151515;
     }
     .sidebar.unwrap {
@@ -509,7 +510,7 @@ copy f.active {
     	opacity: .5;
     	background-color: #000;
     	transition: visibility .5s, opacity .5s ease-in-out;
-    	z-index: 1;
+    	z-index: 2;
     }
     .shadow.unwrap {
     	visibility: hidden;
