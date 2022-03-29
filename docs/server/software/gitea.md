@@ -42,7 +42,7 @@ In the gitea's configuration you will be asked to create a database. Luckly, DBH
 
 Once you've created your server, you will be able to see your DB's information, and should look like this: 
 
-![database details](/contents/database-details.jpg)
+![database details](/content/database-details.jpg)
 
 If you click the eye, you will be able to see more details, including DB password.
 
@@ -56,7 +56,7 @@ Now you should be prompted the gitea's configuration page.
 
 t{**Pro tip:** You can leave the page and the server won't break, but please note that all the changes you've made won't be saved until you install it.}
 
-![gitea inital configuration](/contents/gitea-initial-config.png)
+![gitea inital configuration](/content/gitea-initial-config.png)
 
 ### Database Settings
 
