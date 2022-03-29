@@ -10,6 +10,7 @@ const express = require('express'),
       showdownHighlight = require('showdown-highlight'),
       converter = new showdown.Converter({ 
           strikethrough: 'true',
+          tables: 'true',
           underline: 'true',
           disableForced4SpacesIndentedSublists: 'true',
           extensions: ['showdownDBH', showdownHighlight({ pre: true })]

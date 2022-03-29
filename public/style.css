@@ -302,6 +302,30 @@ body {
     border: 1px solid #646472;
     background-color: #4b4b53;
 }
+.content table {
+    border-collapse: collapse;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 15px;
+}
+tr {
+    border-bottom: 4px solid #27272b;
+}
+td, th {
+    padding: 10px;
+    background: #333338;
+    border-left: 4px solid #27272b;
+}
+th {
+    padding: 15px 10px;
+    text-align: left;
+}
+td:first-child, th:first-child {
+    border-left: none;
+}
+tbody tr:last-child {
+    border-bottom: none;
+}
 
 /* --- WIDGETS --- */
 .page {
