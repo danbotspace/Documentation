@@ -29,7 +29,7 @@ app.set(function(req, res, next){
 app.get('/issue-tracker', (req, res) => {
     const directory = __dirname + '/public/issue-tracker';
     let converted = '# Issue Tracker\nAll known DBH issues and if possible, their solutions.\nt{**Note**: This blog RSS may not contain all errors and issues. Contact contributors for any changes or consider expanding it manually through [GitHub repository](//github.com/DBH-Docs/Documentation/).}<ul class="issue-tracker">';
-    let description = '';
+    let description = 'All known DBH issues and if possible, their solutions.';
     fs.readdir(directory, (err, files) => {
         files.sort() // Sort in descending alphabetic order
             .reverse()
