@@ -28,7 +28,7 @@ t{**Note:** This server might take up to 2 minutes installing, so we ask you to 
 
 Once the server has installed, go to files, then open `custom` folder and finally open `app.ini`.
 
-t{**Temporary note:** Gitea has a SSL bug, so your navigator won't access the server via the server's default domain because the SSL certificate is broken. **We recommend you to proxy the domain.** If you tested this bug and now it's solved, please open an Issue or a PR in our [github repo](https://github.com/DBH-Docs/Documentation).}
+t{**Temporary note:** Gitea has a SSL bug, so your navigator won't access the server via the server's default domain because the SSL certificate is broken. **We recommend you to proxy the domain.** If you tested this bug and now it's solved, please open an Issue or a PR in our [github repository](https://github.com/DBH-Docs/Documentation).}
 
 Now, edit the domain (just replace the 0.0.0.0) with your Proxied domain (if you have) or the server's default domain **WITHOUT** the port. It should look something like this:
 
