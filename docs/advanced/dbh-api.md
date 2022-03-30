@@ -34,7 +34,7 @@ t{**Note**: Given key is an example of using a command, it does not carry any im
 
 # Raw API usage
 
-In order to make a raw API post post request you need to define a few json keys:
+In order to make a raw API post request you need to define a few json keys:
 
 ```js
 let guild_count = client.guilds.cache.size || 0,
