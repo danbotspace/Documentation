@@ -14,9 +14,6 @@
 ++ fa-solid fa-print ++ /advanced/sharex-setup ++ ShareX Setup ++
 ++ fa-solid fa-heart-pulse ++ /advanced/status-api ++ Status API ++ 
 ]]
-[[ +-Commands-+
-++ fa-solid fa-link ++ /commands/server/proxy ++ Server proxy ++
-]]
 [[ +-Server Guides-+
 ++ fa-solid fa-comment-dots ++ /server/intro ++ Intro ++
 {{
