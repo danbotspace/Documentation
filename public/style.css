@@ -230,8 +230,14 @@ body {
 .content {
     color: #fff;
 }
-.content p {
+.content li li {
+    margin-left: 15px;
+}
+.content p, .content li {
     color: #d9d9df;
+}
+.content > p {
+    margin-bottom: 10px;
 }
 .content > pre, code {
 	border: 1px solid #36363b;

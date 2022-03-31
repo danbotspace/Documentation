@@ -14,6 +14,11 @@
 ++ fa-solid fa-print ++ /advanced/sharex-setup ++ ShareX Setup ++
 ++ fa-solid fa-heart-pulse ++ /advanced/status-api ++ Status API ++ 
 ]]
+[[ +-Timeline-+
+++ fa-solid fa-thumbs-up ++ /timeline/2020 ++ Year 2020 ++
+++ fa-solid fa-face-dizzy ++ /timeline/2021 ++ Year 2021 ++
+++ fa-solid fa-infinity ++ /timeline/2022 ++ Year 2022 ++
+]]
 [[ +-Server Guides-+
 ++ fa-solid fa-comment-dots ++ /server/intro ++ Intro ++
 {{
