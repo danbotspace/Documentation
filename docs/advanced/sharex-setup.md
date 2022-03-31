@@ -83,7 +83,7 @@ By opening these files you will find similar "templates":
 
 t{**Note**: You have to either install these files or copy text in clipboard to import uploader settings soon.}
 
-Consider changing `[YOUR_DOMAIN]` field in "RequestURL" to your [proxied](/beginner/proxying) domain. If you want your **ShareX** space to be private you have to set your own password in "key"! In `src/config.json` make sure to change "public", "port", "securePort" "domain" and "key"
+Consider changing `[YOUR_DOMAIN]` field in "RequestURL" to your [proxied](/beginner/proxying) domain. If you want your **ShareX** space to be private you have to set your own password in "key"! In `src/config.json` make sure to change "public", "port", "securePort", "domain" and "key"
 
 ![config.json](/content/sharex/sharex-config.png)
 
