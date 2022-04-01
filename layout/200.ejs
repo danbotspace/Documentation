@@ -97,11 +97,20 @@ $('copy').on('click', function() {
     }, 2000);
 });
 
+// Hashchange
+hash = location.hash.substring(1);
+load = 5; // Amount of posts loaded
+function offsetAnchor() {
+    if (location.hash.length !== 0) window.scrollTo(window.scrollX, window.scrollY - 80);
+}
+window.addEventListener("hashchange", offsetAnchor);
+window.setTimeout(offsetAnchor, 1);
+if (hash && location.pathname == "/issue-tracker/") while (load < hash) load = load + 5;
+
 // Issue tracker handler
 issue_tracker = $('.issue-tracker li');
-issue_tracker.hide();
 posts = issue_tracker.length;
-load = 5; // Amount of posts loaded
+issue_tracker.hide();
 if (load >= posts) $('.content btn').hide();
 issue_tracker.slice(0, load).show();
 $('.content btn').on('click', function() {

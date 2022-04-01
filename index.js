@@ -32,10 +32,12 @@ app.get('/issue-tracker', (req, res) => {
     let converted = '# Issue Tracker\nAll known DBH issues and if possible, their solutions.\nt{**Note**: This blog RSS may not contain all errors and issues. Contact contributors for any changes or consider expanding it manually through [GitHub repository](//github.com/DBH-Docs/Documentation/).}<ul class="issue-tracker">';
     let description = 'All known DBH issues and if possible, their solutions.';
     fs.readdir(directory, (err, files) => {
+        let count = 1;
         files.sort() // Sort in descending alphabetic order
             .reverse()
             .forEach(file => {
-                converted += '<li><hr>\n' + fs.readFileSync(directory + '/' + file, 'utf8') + '</li>';
+                converted += '<li id="' + count + '"><hr>\n' + fs.readFileSync(directory + '/' + file, 'utf8') + '</li>';
+                count++;
             });
     });
     fs.readFile(__dirname + '/layout/summary.md', 'utf8', async (err, data) => {
