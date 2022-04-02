@@ -469,6 +469,9 @@ copy f.active {
         height: 80px;
         position: fixed;
     }
+    .header.active {
+        box-shadow: 0 0 5px #151515;
+    }
     .header-links a {
         padding: 0 15px;
 	font-size: 12px;

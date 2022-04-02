@@ -75,6 +75,18 @@ $('.shadow').on('click', function() {
     mobile.addClass('unwrap');
 });
 
+// Header shadow
+$(window).scroll(function() {
+scroll = $(window).scrollTop();
+console.log(scroll);
+    if (scroll > 0) {
+        $(".header").addClass("active");
+    }
+    else {
+        $(".header").removeClass("active");
+    }
+});
+
 // Highlighting active page in header/sidebar
 $('.header [href], .sidebar [href]').each(function() {
     if (this.href != window.location.href) return;
