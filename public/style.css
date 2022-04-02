@@ -180,16 +180,16 @@ body {
 .items li > ul > li {
     margin: 0 0 0 10px;
 }
-.items, .logo-container {
+.items, .container {
     direction: ltr;
 }
-.logo-container img {
-    width: 50px;
+.container img {
+    width: auto;
 	height: 50px;
 	display: inline-block;
     margin: 0 10px 0 0;
 }
-.logo-container {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -498,10 +498,10 @@ copy f.active {
     .fa-bars {
         visibility: visible;
     }
-    .logo-container {
+    .container {
         height: 80px;
     }
-    .logo-container.unwrap {
+    .logo.unwrap {
     	opacity: 0;
     	visibility: hidden;
     }

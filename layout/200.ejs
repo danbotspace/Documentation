@@ -22,7 +22,7 @@
 </head>
 <body>
     <nav class="sidebar">
-        <div class="logo-container">
+        <div class="container logo">
             <img src="/dbh-docs.png" alt="DBH Docs" width="512" height="512">Docs
         </div>
         <div class="items">
@@ -57,7 +57,7 @@
 </body>
 <script>
 // Mobile hamburger
-mobile = $('.sidebar, .items, .logo-container, .shadow, body')
+mobile = $('.sidebar, .items, .logo, .shadow, body')
 $('.fa-bars').on('click', function() {
     mobile.toggleClass('unwrap')
 });
