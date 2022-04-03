@@ -26,6 +26,9 @@ body {
     text-decoration-color: #fff;
     -webkit-tap-highlight-color: transparent;
 }
+.content > img, .content pre, .page, tip, user {
+    box-shadow: 0 3px 5px #212124;
+}
 
 /* --- HEADER --- */
 .header {
@@ -273,6 +276,7 @@ body {
 	margin: 12px auto;
 	display: block;
 	max-width: 100%;
+    border-radius: 2px;
 }
 .content blockquote {
 	border-left: 3px solid #36363b;
@@ -335,15 +339,18 @@ tbody tr:last-child {
 }
 
 /* --- WIDGETS --- */
-.page {
+.card {
     border: 1px solid #36363b;
     background-color: #333338;
     border-radius: 4px;
+    padding: 15px;
+    margin: 15px;
+}
+
+.page {
     min-height: 45px;
     display: flex;
     align-items: center;
-    padding: 15px;
-    margin: 15px;
     transition: all ease-in-out .12s;
     color: #fff !important;
 }
@@ -361,13 +368,8 @@ tbody tr:last-child {
 }
 
 tip {
-    border: 1px solid #36363b;
-    background-color: #333338;
-    border-radius: 4px;
     font-size: 14px;
     min-height: 45px;
-    padding: 15px;
-    margin: 15px;
     display: flex;
     align-items: center;
 }
@@ -382,20 +384,15 @@ tip:before {
 
 user {
     display: block;
-    border: 1px solid #36363b;
-    background-color: #333338;
-    border-radius: 4px;
-    padding: 15px;
     font-size: 20px;
     color: #fff;
-    margin: 15px;
 }
 user img {
     width: 80px;
     height: 80px;
     margin: 0 12px 0 0 !important;
     float: left;
-    border-radius: 10px;
+    border-radius: 4px !important;
 }
 user span {
     font-size: 14px;

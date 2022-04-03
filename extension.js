@@ -42,9 +42,9 @@
                 listeners: {
                     'italicsAndBold.after': function (event, text, options, globals) {
                         // Tip syntax
-                        text = text.replace(tip, '<tip><f>$1</f></tip>');
+                        text = text.replace(tip, '<tip class="card"><f>$1</f></tip>');
                         // Page syntax
-                        text = text.replace(page, '<a href="$1" class="page">$2</a>');
+                        text = text.replace(page, '<a href="$1" class="page card">$2</a>');
                         return text;
                     }
                 }
@@ -89,10 +89,10 @@
                     // alphabet order only!
                     let ppfp = (!pfp) ? '' : `<img src="${pfp}">`;
                     let pdesc = (!desc) ? '' : `<span>${desc}</span>`;
-                    let pcard = (!card) ? '' : `<a href="${card}" class="card"><i class="fa-solid fa-address-card"></i></a>`;
-                    let pgithub = (!github) ? '' : `<a href="https://github.com/${github}" class="github"><i class="fa-brands fa-github"></i></a>`;
-                    let ptwitter = (!twitter) ? '' : `<a href="https://twitter.com/${twitter}" class="github"><i class="fa-brands fa-twitter"></i></a>`;
-                    return '<user>' + ppfp + '<t>' + name + pdesc + '<f>' + pcard + pgithub + ptwitter + '</f></t></user>';
+                    let pcard = (!card) ? '' : `<a href="${card}"><i class="fa-solid fa-address-card"></i></a>`;
+                    let pgithub = (!github) ? '' : `<a href="https://github.com/${github}"><i class="fa-brands fa-github"></i></a>`;
+                    let ptwitter = (!twitter) ? '' : `<a href="https://twitter.com/${twitter}"><i class="fa-brands fa-twitter"></i></a>`;
+                    return '<user class="card">' + ppfp + '<t>' + name + pdesc + '<f>' + pcard + pgithub + ptwitter + '</f></t></user>';
                 }
             },
             // Copy syntax
