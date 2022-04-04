@@ -17,18 +17,16 @@ const express = require('express'),
       });
 
 // Middleware.
-//app.use(limiter);
+app.use(limiter);
 app.use(require('compression')());
 app.use(require('serve-favicon')(__dirname + '/public/dbh-docs.ico'));
 app.use(express.static(path.join(__dirname, "public")));
-//app.set('trust proxy', 2);
+app.set('trust proxy', 2);
 app.set('view engine', 'ejs');
 app.set(function(req, res, next){
     res.header('Cache-Control', 'max-age=2592000');
     next();
 });
-
-app.get('/ip', (request, response) => response.send(request.ip))
 
 // /issue-tracker/id/[ID/name] returns post, IDs start from 1
 app.get('/issue-tracker', (req, res) => {
