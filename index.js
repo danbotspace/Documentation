@@ -17,10 +17,11 @@ const express = require('express'),
       });
 
 // Middleware.
-app.use(limiter);
+//app.use(limiter);
 app.use(require('compression')());
 app.use(require('serve-favicon')(__dirname + '/public/dbh-docs.ico'));
 app.use(express.static(path.join(__dirname, "public")));
+//app.set('trust proxy', 2);
 app.set('view engine', 'ejs');
 app.set(function(req, res, next){
     res.header('Cache-Control', 'max-age=2592000');
@@ -29,6 +30,7 @@ app.set(function(req, res, next){
 
 // /issue-tracker/id/[ID/name] returns post, IDs start from 1
 app.get('/issue-tracker', (req, res) => {
+    console.log(res.ip);
     const directory = __dirname + '/docs/issue-tracker/id';
     let converted = '# Issue Tracker\nAll known DBH issues and if possible, their solutions.\nt{**Note**: This blog RSS may not contain all errors and issues. Contact contributors for any changes or consider expanding it manually through [GitHub repository](//github.com/DBH-Docs/Documentation/).}<ul class="issue-tracker">';
     let description = 'All known DBH issues and if possible, their solutions.';
