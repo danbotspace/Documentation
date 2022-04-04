@@ -116,8 +116,7 @@ body {
     scrollbar-width: thin;
     overflow-y: scroll;
     user-select: none;
-    padding-bottom: 30px;
-    direction: rtl;
+    padding-bottom: 50px;
 }
 .sidebar::-webkit-scrollbar {
     width: 8px;
@@ -183,8 +182,8 @@ body {
 .items li > ul > li {
     margin: 0 0 0 10px;
 }
-.items, .container {
-    direction: ltr;
+.items ul ul, .items li:not(:first-child) a {
+    margin-left: 10px;
 }
 .container img {
     width: auto;
