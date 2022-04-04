@@ -57,7 +57,7 @@ app.get('*', (req, res) => {
     if (url[url.length - 1] != '/') return res.redirect(url + '/');
     if (url == '/') return res.redirect('/introduction/');
     fs.readFile(__dirname + '/docs' + url.slice(0, -1) + '.md', 'utf8' , (err, data) => {
-    	if (err) data = '# Page not found, 404!\nI found nothing... Here\'s a picture of some node.js dev duck\n![An image of ducks by devducks](//cdn.shopify.com/s/files/1/1321/6369/products/DSCF1962_412x412.jpg)'
+    	if (err) data = '# Page not found, 404!\nI found nothing... Here\'s a picture of some node.js dev duck\n![An image of node.js dev duck by devducks](//cdn.shopify.com/s/files/1/1321/6369/products/DSCF1962_412x412.jpg)'
         let converted = converter.makeHtml(data);
         let description = paragraph.exec(converted);
         description = (description) ? description[1] : "";
