@@ -1,0 +1,9 @@
+14.10.21
+
+# Broken website
+
+DBH community points out that website was broken since decades. Dan knows this problem but most likely due to lack of developers nobody fixes it. An example of broken website is [https://danbot.host/stats](https://danbot.host/stats) page below.
+
+t{**Status**: Known}
+
+![Broken website by HPRIYAM](//cdn.discordapp.com/attachments/928029676209852517/955733980118921236/unknown.png)
