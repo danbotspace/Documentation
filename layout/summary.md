@@ -11,6 +11,7 @@
 ]]
 [[ +-Advanced Management-+
 ++ fa-solid fa-cloud ++ /advanced/dbh-api ++ DBH API ++
+++ fa-solid fa-cloud-arrow-up ++ /advanced/vscode-sftp ++ SFTP Using VSCode ++
 ++ fa-solid fa-print ++ /advanced/sharex-setup ++ ShareX Setup ++
 ++ fa-solid fa-heart-pulse ++ /advanced/status-api ++ Status API ++ 
 ]]
