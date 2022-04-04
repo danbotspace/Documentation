@@ -1,5 +1,9 @@
 # Credits
 
+The credentials list that is based on people who contributed to the project or DBH itself. If you're sure you have to be in the list contact us with a credits.md pull request.
+
+t{**Note**: Your pull request on being in the credential list will be declined & closed if you're not the DBH member!}
+
 ### Thanks to everyone who somehow helped this [project](https://help.dbh.wtf):
 
 u{
