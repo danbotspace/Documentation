@@ -1,7 +1,0 @@
-11.03.22
-
-# Moving to new Dono-01
-
-This brought a primarily one problem - being not able to manage old Dono-01 servers! Dan never told why he instantly changed old dedi to the new one without any warns for making a backup. Dan slowly gives away files from old Dono-01.
-
-t{**Status**: In progress}

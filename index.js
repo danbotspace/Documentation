@@ -27,8 +27,9 @@ app.set(function(req, res, next){
     next();
 });
 
+// /issue-tracker/id/[ID/name] returns post, IDs start from 1
 app.get('/issue-tracker', (req, res) => {
-    const directory = __dirname + '/public/issue-tracker';
+    const directory = __dirname + '/docs/issue-tracker/id';
     let converted = '# Issue Tracker\nAll known DBH issues and if possible, their solutions.\nt{**Note**: This blog RSS may not contain all errors and issues. Contact contributors for any changes or consider expanding it manually through [GitHub repository](//github.com/DBH-Docs/Documentation/).}<ul class="issue-tracker">';
     let description = 'All known DBH issues and if possible, their solutions.';
     fs.readdir(directory, (err, files) => {
@@ -48,13 +49,15 @@ app.get('/issue-tracker', (req, res) => {
     });
 });
 
+// Redirect to /[page]/ if /[page]
 // Each request reads for markdown file in docs folder.
 // Converts md to html to respond with proper format.
 app.get('*', (req, res) => {
-    let url = req.url
-    if (url == '/') url = '/introduction';
-    fs.readFile(__dirname + '/docs' + url + '.md', 'utf8' , (err, data) => {
-    	if (err) data = '# Page not found, 404!\nI found nothing but a ruble laying down in tears...\n![Ruble Crying](/content/ruble-crying.png)'
+    let url = decodeURI(req.url);
+    if (url[url.length - 1] != '/') return res.redirect(url + '/');
+    if (url == '/') return res.redirect('/introduction/');
+    fs.readFile(__dirname + '/docs' + url.slice(0, -1) + '.md', 'utf8' , (err, data) => {
+    	if (err) data = '# Page not found, 404!\nI found nothing... Here\'s a picture of some node.js dev duck\n![An image of ducks by devducks](//cdn.shopify.com/s/files/1/1321/6369/products/DSCF1962_412x412.jpg)'
         let converted = converter.makeHtml(data);
         let description = paragraph.exec(converted);
         description = (description) ? description[1] : "";
