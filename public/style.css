@@ -152,7 +152,10 @@ body {
     margin: 0 0 5px 0;
     white-space: nowrap;
 }
-.items a:hover, .items li em:hover, a.active {
+.items a:hover,
+.items li em:hover,
+.items li em.expand,
+.items a.active {
     background-color: #36363a;
     transition: all ease-in-out .12s;
 }
@@ -163,10 +166,6 @@ body {
 }
 .items li.expand, .items > ul > li:first-child {
     max-height: fit-content;
-}
-.items li em.expand {
-    background-color: #36363a;
-    transition: all ease-in-out .12s;
 }
 .items li em.expand:before {
     font: var(--fa-font-solid);
