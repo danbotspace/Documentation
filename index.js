@@ -21,7 +21,7 @@ app.use(limiter);
 app.use(require('compression')());
 app.use(require('serve-favicon')(__dirname + '/public/dbh-docs.ico'));
 app.use(express.static(path.join(__dirname, "public")));
-app.set('trust proxy', 2);
+app.set('trust proxy', 1);
 app.set('view engine', 'ejs');
 app.set(function(req, res, next){
     res.header('Cache-Control', 'max-age=2592000');
