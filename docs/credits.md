@@ -65,7 +65,7 @@ u{
 'desc': 'The one who originally created a [timeline](//github.com/CurryBoi29/DanBot-Hosting-Timeline) for DanBot Hosting';
 'github': 'CurryBoi29';
 'name': 'Curry';
-'pfp': 'https://cdn.discordapp.com/avatars/405771597761216522/7e5d1c70e6dea4f3dc644b07a4c39e24?size=512';
+'pfp': '//cdn.discordapp.com/avatars/405771597761216522/a_9f9351e54b9924e162efebafb63cd15c?size=512';
 'twitter': '';
 }
 
