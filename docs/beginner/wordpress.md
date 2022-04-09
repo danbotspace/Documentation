@@ -55,4 +55,4 @@ If you don't have a database, guess you need one. For that head to "Databases" t
 
 After you've done, finish the installation: add the "site name", "author", "password" and "email". It can be whatever you want. Now you're ready to go and make your very own beautiful **Wordpress** website using its huge world of plugins and themes with DBH! You can check an example of a working DBH wordpress website here:
 
-p{//wordpress.rick-roll.xyz/} Example - wordpress.rick-roll.xyz
+p{http://wordpress.rick-roll.xyz/} Example - wordpress.rick-roll.xyz
