@@ -33,6 +33,7 @@
     'use strict';
     showdown.extension('showdownDBH', function () {
         let page = new RegExp('p{(.*)} (.*)');
+        let pagex = new RegExp('p{(.*) \\+\\+ (.*)} (.*)');
         let tip = new RegExp('t{(.*)}');
         let user = new RegExp("u{\n(?:'card': '(.*)';\n|.*\n)?(?:'desc': '(.*)';\n|.*\n)?(?:'github': '(.*)';\n|.*\n)?(?:'name': '(.*)';\n|.*\n)?(?:'pfp': '(.*)';\n|.*\n)?(?:'twitter': '(.*)';\n|.*)?}", 'gm')
         return [
@@ -42,9 +43,11 @@
                 listeners: {
                     'italicsAndBold.after': function (event, text, options, globals) {
                         // Tip syntax
-                        text = text.replace(tip, '<tip class="card"><f>$1</f></tip>');
+                        text = text.replace(tip, '<tip class="card"><i class="fa-solid fa-circle-question"></i><f>$1</f></tip>');
+                        // Extended page syntax
+                        text = text.replace(pagex, '<a href="$2" class="page card"><i class="$1"></i>$3</a>');
                         // Page syntax
-                        text = text.replace(page, '<a href="$1" class="page card">$2</a>');
+                        text = text.replace(page, '<a href="$1" class="page card"><i class="fa-solid fa-arrow-right-to-bracket"></i>$2</a>');
                         return text;
                     }
                 }

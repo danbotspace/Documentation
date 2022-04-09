@@ -352,11 +352,9 @@ tbody tr:last-child {
     transition: all ease-in-out .12s;
     color: #fff !important;
 }
-.page:before {
-    font: var(--fa-font-solid);
-    content: "\f090";
+.page i {
     display: inline-block;
-	min-width: 40px;
+	margin-right: 15px;
     font-size: 30px;
 }
 .page:hover {
@@ -371,10 +369,8 @@ tip {
     display: flex;
     align-items: center;
 }
-tip:before {
-    font: var(--fa-font-solid);
-    content: "\f059";
-    min-width: 40px;
+tip i {
+    min-width: 45px;
     font-size: 30px;
     color: #fff;
     float: left;

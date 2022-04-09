@@ -30,7 +30,7 @@
 ++ fa-solid fa-layer-group ++ /server/database/redis/ ++ Redis ++
 ]]
 [[ +-Development-+
-++ fa-solid fa-layer-group ++ /server/development/aio/ ++ All In One ++
+++ fa-solid fa-terminal ++ /server/development/aio/ ++ All In One ++
 ++ fa-solid fa-code ++ /server/development/code-server/ ++ Code Server ++
 ++ fa-brands fa-java ++ /server/development/java/ ++ Java ++
 ++ fa-brands fa-node-js ++ /server/development/nodejs/ ++ Node.js ++
