@@ -29,6 +29,9 @@ body {
 .content p > img, .content pre, .page, tip, user {
     box-shadow: 0 3px 5px #212124;
 }
+a, button {
+    outline: none;
+}
 
 /* --- HEADER --- */
 .header {
