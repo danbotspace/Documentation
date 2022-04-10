@@ -1,3 +1,4 @@
+// Custom message format: OK, WARN, ERR
 function defineMessage(type, string) {
     const chalk = require('chalk');
     if (!string) return;
@@ -8,6 +9,7 @@ function defineMessage(type, string) {
     return chalk.white.bgRed.bold(' ERR ') + chalk.gray(' Wrong type provided!');
 }
 
+// Execute Bash commands
 function exec(cmd, handler = function(err, stdout, stderr){
     if (stdout) console.log(defineMessage('WARN', stdout));
     if (err) console.log(defineMessage('ERR', stderr));
@@ -16,6 +18,15 @@ function exec(cmd, handler = function(err, stdout, stderr){
     return childfork.exec(cmd, handler);
 }
 
+// Return random logo
+// e.g. either /dbh-docs.png or /blob-help.png
+function randomLogo() {
+    let logo = '/dbh-docs.png';
+    let random = Math.random();
+    if (random > 0.9) logo = '/blob-help.png';
+    return logo;
+}
+
 module.exports = {
-    defineMessage, exec
+    defineMessage, exec, randomLogo
 };

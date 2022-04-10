@@ -50,7 +50,7 @@ app.get('/issue-tracker', (req, res) => {
         let items = converter.makeHtml(data);
         converted += '</ul>\n<btn>Load more...</btn>';
         converted = converter.makeHtml(converted);
-        res.status(200).render(__dirname + '/views/200', {content:converted, menu:items, metaDescription:description});
+        res.status(200).render(__dirname + '/views/200', {content:converted, logo:dbh.randomLogo(), menu:items, metaDescription:description});
     });
 });
 
@@ -70,7 +70,7 @@ app.get('*', (req, res) => {
         fs.readFile(__dirname + '/views/summary.md', 'utf8', (err, data) => {
     		if (err) console.log(dbh.defineMessage('ERR', err));
         	let items = converter.makeHtml(data);
-            res.status(200).render(__dirname + '/views/200', {content:converted, menu:items, metaDescription:description});
+            res.status(200).render(__dirname + '/views/200', {content:converted, logo:dbh.randomLogo(), menu:items, metaDescription:description});
     	});
     });
 });
