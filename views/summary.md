@@ -8,6 +8,7 @@
 [[ +-Beginner's Guidebook-+
 ++ fa-solid fa-folder-plus ++ /beginner/creating-a-bot/ ++ Creating A Bot ++
 ++ fa-solid fa-plug ++ /beginner/proxying/ ++ Proxying ++
+++ fa-solid fa-hand-holding-heart ++ /beginner/tickets/ ++ Ticket System ++
 ++ fa-brands fa-wordpress-simple ++ /beginner/wordpress/ ++ Wordpress ++
 ]]
 [[ +-Advanced Management-+

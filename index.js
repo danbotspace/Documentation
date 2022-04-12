@@ -22,13 +22,14 @@ const express = require('express'),
 app.use(limiter);
 app.use(require('compression')());
 app.use(require('serve-favicon')(__dirname + '/public/dbh-docs.ico'));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"), {
+    setHeaders: function(res, hpath) {
+        if (path.extname(hpath) == '.css') return;
+        res.set('Cache-control', 'public, max-age=' + 60 * 60 * 24 * 365.24 * 1000); // A year
+    }
+}));
 app.set('trust proxy', 1);
 app.set('view engine', 'ejs');
-app.set(function(req, res, next){
-    res.set('Cache-Control', 'public, max-age=31557600'); // A year
-    next();
-});
 
 // /issue-tracker/id/[ID/name] returns post, IDs start from 1
 app.get('/issue-tracker', (req, res) => {
