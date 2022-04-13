@@ -18,6 +18,31 @@ function exec(cmd, handler = function(err, stdout, stderr){
     return childfork.exec(cmd, handler);
 }
 
+// Read summary.md
+// Return the next hyperlink and name
+function npFromSummary(urlRequested) {
+    const fs = require('fs');
+    const regex = new RegExp('\\+\\+ (.*) \\+\\+ (.*) \\+\\+ (.*) \\+\\+', 'gm');
+    let m, hyperlink, name, icon;
+    let data = fs.readFileSync('./views/summary.md', 'utf8');
+    do {
+        m = regex.exec(data);
+        if (m[2] == urlRequested) {
+            m = regex.exec(data);
+            if (m) {
+                icon = m[1];
+                hyperlink = m[2];
+                name = m[3];
+                m = '';
+            }
+        }
+    } while (m);
+    if (!name) name = 'Introduction';
+    if (!hyperlink) hyperlink = '/introduction/';
+    if (!icon) icon = 'fa-solid fa-door-open';
+    return [hyperlink, name, icon]
+}
+
 // Return random logo
 // e.g. either /dbh-docs.png or /blob-help.png
 function randomLogo() {
@@ -28,5 +53,5 @@ function randomLogo() {
 }
 
 module.exports = {
-    defineMessage, exec, randomLogo
+    defineMessage, exec, npFromSummary, randomLogo
 };

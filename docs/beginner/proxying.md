@@ -37,4 +37,4 @@ After it is done you have to wait up to 1-2 minutes to see the result. Bot will 
 
 ![Successful proxying](/content/proxying-success.png)
 
-**Note**: if you faced a problem and bot didn't give you a success result please consider contacting moderation in order to fix your issue. Also make sure everything is fine in your proxy fields!
+t{**Note**: if you faced a problem and bot didn't give you a success result please consider contacting moderation in order to fix your issue. Also make sure everything is fine in your proxy fields!}

@@ -104,6 +104,41 @@ a, button {
 .footer i:hover, copy i:hover:before {
     background-color: #36363a;
 }
+.pre-footer {
+    position: relative;
+    background-color: #242428;
+    height: 60px;
+    margin-top: 55px;
+}
+.next-page {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    height: 50px;
+    width: 265px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    transition: all ease-in-out .12s;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    outline: 15px solid #27272b;
+}
+.next-page p {
+    font-size: 13px;
+    margin-top: 4px;
+}
+.next-page i {
+    display: inline-block;
+	margin-right: 15px;
+    font-size: 30px;
+}
+.next-page:hover {
+    background-color: #4b4b53;
+    border: 1px solid #4f4f58;
+    transition: all ease-in-out .12s;
+}
 
 /* --- SIDEBAR --- */
 .sidebar {
@@ -215,7 +250,7 @@ a, button {
     padding: 10px 30px;
     transition: all ease-in-out .5s;
     width: 120vh;
-    min-height: calc(100vh - 240px);
+    min-height: calc(100vh - 270px);
 }
 .wrapper {
     width: 100%;
@@ -237,7 +272,7 @@ a, button {
 .content li li {
     margin-left: 15px;
 }
-.content p, .content li {
+.content p, .content li, .next-page p {
     color: #d9d9df;
 }
 .content > p {

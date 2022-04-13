@@ -51,7 +51,16 @@ app.get('/issue-tracker', (req, res) => {
         let items = converter.makeHtml(data);
         converted += '</ul>\n<btn>Load more...</btn>';
         converted = converter.makeHtml(converted);
-        res.status(200).render(__dirname + '/views/200', {content:converted, logo:dbh.randomLogo(), menu:items, metaDescription:description});
+        let np = dbh.npFromSummary(req.url);
+        res.status(200).render(__dirname + '/views/200', {
+            content: converted,
+            formatNextPage: np[1],
+            iconNextPage: np[2],
+            logo: dbh.randomLogo(),
+            menu: items,
+            metaDescription: description,
+            nextPage: np[0]
+        });
     });
 });
 
@@ -71,7 +80,16 @@ app.get('*', (req, res) => {
         fs.readFile(__dirname + '/views/summary.md', 'utf8', (err, data) => {
     		if (err) console.log(dbh.defineMessage('ERR', err));
         	let items = converter.makeHtml(data);
-            res.status(200).render(__dirname + '/views/200', {content:converted, logo:dbh.randomLogo(), menu:items, metaDescription:description});
+            let np = dbh.npFromSummary(url);
+            res.status(200).render(__dirname + '/views/200', {
+                content: converted,
+                formatNextPage: np[1],
+                iconNextPage: np[2],
+                logo: dbh.randomLogo(),
+                menu: items,
+                metaDescription: description,
+                nextPage: np[0]
+            });
     	});
     });
 });
