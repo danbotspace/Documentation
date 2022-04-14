@@ -2,8 +2,9 @@
  * DBH Docs extension
  * Supports various widgets related to pages and sidebar
  * Usage:
- * p{link} page name                      ->  <a href="link" class="page">page name</a>
- * t{**Note/Good To Know/etc**: text}     ->  <tip><f>**Note/Good To Know/etc**: text</f></tip>
+ * p{link} page name                      ->  <a href="link" class="page card">page name</a>
+ * p{icon ++ link} page name              ->  <a href="link" class="page card"><i class="icon"></i>page name</a>
+ * t{**Note/Good To Know/etc**: text}     ->  <tip class="card"><i class="fa-solid fa-circle-question"></i><f>**Note/Good To Know/etc**: text</f></tip>
  * ??text??                               ->  <copy>text<f>Copied!</></copy>
  * u{                                     ->  <user> ...
  * 'card': 'link';                        ->  <f> ... <a href="link" class="card"><i class="fa-solid fa-address-card"></i></a>
@@ -32,6 +33,7 @@
 }(function (showdown) {
     'use strict';
     showdown.extension('showdownDBH', function () {
+        let copy = new RegExp('\\?\\?(.*)\\?\\?', 'gm');
         let page = new RegExp('p{(.*)} (.*)');
         let pagex = new RegExp('p{(.*) \\+\\+ (.*)} (.*)');
         let tip = new RegExp('t{(.*)}');
@@ -42,67 +44,44 @@
                 type: 'listener',
                 listeners: {
                     'italicsAndBold.after': function (event, text, options, globals) {
+                        // Copy syntax
+                        text = text.replace(copy, '<copy>$1<f>Copied!</f></copy>');
                         // Tip syntax
                         text = text.replace(tip, '<tip class="card"><i class="fa-solid fa-circle-question"></i><f>$1</f></tip>');
                         // Extended page syntax
                         text = text.replace(pagex, '<a href="$2" class="page card"><i class="$1"></i>$3</a>');
                         // Page syntax
                         text = text.replace(page, '<a href="$1" class="page card"><i class="fa-solid fa-arrow-right-to-bracket"></i>$2</a>');
+                        // User syntax
+                        text = text.replace(user, function(match, card, desc, github, name, pfp, twitter, offset, text) {
+                            // If pfp field empty parse nothing
+                            // alphabet order only!
+                            let ppfp = (!pfp) ? '' : `<img src="${pfp}">`;
+                            let pdesc = (!desc) ? '' : `<span>${desc}</span>`;
+                            let pcard = (!card) ? '' : `<a href="${card}"><i class="fa-solid fa-address-card"></i></a>`;
+                            let pgithub = (!github) ? '' : `<a href="https://github.com/${github}"><i class="fa-brands fa-github"></i></a>`;
+                            let ptwitter = (!twitter) ? '' : `<a href="https://twitter.com/${twitter}"><i class="fa-brands fa-twitter"></i></a>`;
+                            return '<user class="card">' + ppfp + '<t>' + name + pdesc + '<f>' + pcard + pgithub + ptwitter + '</f></t></user>';
+                        });
+                        return text;
+                    },
+                    'githubCodeBlocks.after': function (event, text, options, globals) {
+                        let mlink = new RegExp('\\+\\+ (.*) \\+\\+ (.*) \\+\\+ (.*) \\+\\+', 'g');
+                        let mli = new RegExp('\\[\\[', 'g');
+                        let mlic = new RegExp('\\]\\]', 'g');
+                        let mul = new RegExp('{{', 'g');
+                        let mulc = new RegExp('}}', 'g');
+                        let mem = new RegExp('\\+-(.*)-\\+', 'g');
+                        // Menu syntax
+                        text = text.replace(mlink, '<a href="$2"><i class="$1"></i>$3</a>');
+                        text = text.replace(mul, '<ul>');
+                        text = text.replace(mulc, '</ul>');
+                        text = text.replace(mli, '<li>');
+                        text = text.replace(mlic, '</li>');
+                        text = text.replace(mem, '<em>$1</em>');
                         return text;
                     }
                 }
-            },
-            // Menu syntax
-            {
-                type: 'lang',
-                regex: '\\+\\+ (.*) \\+\\+ (.*) \\+\\+ (.*) \\+\\+',
-                replace: '<a href="$2"><i class="$1"></i>$3</a>'
-            },
-            {
-                type: 'lang',
-                regex: '{{',
-                replace: '<ul>'
-            },
-            {
-                type: 'lang',
-                regex: '}}',
-                replace: '</ul>'
-            },
-            {
-                type: 'lang',
-                regex: '\\[\\[',
-                replace: '<li>'
-            },
-            {
-                type: 'lang',
-                regex: '\\]\\]',
-                replace: '</li>'
-            },
-            {
-                type: 'lang',
-                regex: '\\+-(.*)-\\+',
-                replace: '<em>$1</em>'
-            },
-            // User card syntax
-            {
-                type: 'lang',
-                regex: user,
-                replace: function (match, card, desc, github, name, pfp, twitter, offset, text) {
-                    // If pfp field empty parse nothing
-                    // alphabet order only!
-                    let ppfp = (!pfp) ? '' : `<img src="${pfp}">`;
-                    let pdesc = (!desc) ? '' : `<span>${desc}</span>`;
-                    let pcard = (!card) ? '' : `<a href="${card}"><i class="fa-solid fa-address-card"></i></a>`;
-                    let pgithub = (!github) ? '' : `<a href="https://github.com/${github}"><i class="fa-brands fa-github"></i></a>`;
-                    let ptwitter = (!twitter) ? '' : `<a href="https://twitter.com/${twitter}"><i class="fa-brands fa-twitter"></i></a>`;
-                    return '<user class="card">' + ppfp + '<t>' + name + pdesc + '<f>' + pcard + pgithub + ptwitter + '</f></t></user>';
-                }
-            },
-            // Copy syntax
-            {
-                type: 'lang',
-                regex: '\\?\\?(.*)\\?\\?',
-                replace: '<copy>$1<f>Copied!</f></copy>'
             }
         ];
     });
