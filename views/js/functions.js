@@ -27,20 +27,20 @@ function npFromSummary(urlRequested) {
     let data = fs.readFileSync('./views/summary.md', 'utf8');
     do {
         m = regex.exec(data);
-        if (m[2] == urlRequested) {
+        if (m && m[2] == urlRequested) {
             m = regex.exec(data);
             if (m) {
                 icon = m[1];
                 hyperlink = m[2];
                 name = m[3];
-                m = '';
             }
+            m = '';
         }
     } while (m);
-    if (!name) name = 'Introduction';
-    if (!hyperlink) hyperlink = '/introduction/';
-    if (!icon) icon = 'fa-solid fa-door-open';
-    return [hyperlink, name, icon]
+    icon = icon || 'fa-solid fa-door-open';
+    hyperlink = hyperlink || '/introduction/';
+    name = name || 'Introduction';
+    return [hyperlink, name, icon];
 }
 
 // Return random logo
