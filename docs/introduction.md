@@ -33,4 +33,5 @@ t{**Note**: We're counted as an unofficial source of knowledge. Please note that
 ## Rules regarding DBH
 
 p{fa-solid fa-file-shield ++ https://docs.google.com/document/d/1dOY5xefHu_RzBdOphh-_el8vNgMz2U_OWO8OeulOg_4/edit} Privacy Policy
+
 p{fa-solid fa-file-contract ++ https://docs.google.com/document/d/1BxGFRlH3TEMqfUWBPszsWYudbKmcbM5pkp7bTq4IbHg/edit} Terms Of Service
