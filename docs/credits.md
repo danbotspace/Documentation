@@ -14,7 +14,7 @@ u{
 'twitter': 'Dominiff';
 }
 u{
-'card': '';
+'card': 'https://omxpro.is-a.dev/';
 'desc': 'The one who made pages, suggested great ideas and managed documentation.';
 'github': 'omxpro';
 'name': 'Omxpro';
