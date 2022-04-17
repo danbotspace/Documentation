@@ -34,11 +34,16 @@
         <nav class="header">
             <div class="hamburger">
                 <i class="fa-solid fa-bars"></i>
+                <input type="search" placeholder="Search...">
+                <div class="items">
+                    <%- menuFormatted %>
+                </div>
             </div>
             <ul class="header-links">
                 <li><a href="/introduction/">Home</a></li>
                 <li><a href="https://panel.danbot.host/">Panel</a></li>
                 <li><a href="https://github.com/DBH-Docs/Documentation">GitHub</a></li>
+                <li><i class="fa-solid fa-magnifying-glass"></i></li>
             </ul>
         </nav>
         <div class="content">
@@ -67,7 +72,7 @@
 </body>
 <script>
 // Mobile hamburger
-mobile = $('.sidebar, .items, .logo, .shadow, body')
+mobile = $('.sidebar, .sidebar .items, .logo, .shadow, body')
 $('.fa-bars').on('click', function() {
     mobile.toggleClass('unwrap')
 });
@@ -79,8 +84,11 @@ $('.items li em').on('click', function() {
     $(this).toggleClass('expand');
 });
 
-// Mobile shadow + unwrap on load
-if (window.matchMedia('screen and (max-width: 1250px)').matches) mobile.toggleClass('unwrap');
+// Mobile shadow + unwrap, inactive on load
+if (window.matchMedia('screen and (max-width: 1250px)').matches) {
+    mobile.toggleClass('unwrap');
+    $(".hamburger input").addClass('inactive');
+}
 $('.shadow').on('click', function() {
     mobile.addClass('unwrap');
 });
@@ -128,7 +136,7 @@ window.setTimeout(offsetAnchor, 1);
 if (hash && location.pathname == "/issue-tracker/") while (load < hash) load = load + 5;
 
 // Issue tracker handler
-issue_tracker = $('.issue-tracker li');
+issue_tracker = $('.issue-tracker > li');
 posts = issue_tracker.length;
 issue_tracker.hide();
 if (load >= posts) $('.content btn').hide();
@@ -137,6 +145,26 @@ $('.content btn').on('click', function() {
     load = (load + 5 <= posts) ? load + 5 : posts;
     issue_tracker.slice(0, load).show();
     if (load >= posts) $(this).hide();
+});
+
+// Search bar
+$('.header-links .fa-magnifying-glass').click(function() {
+    $('.header-links a, .hamburger input').toggleClass('inactive')
+});
+$(".hamburger .items").hide();
+$(document).click(function(event) {
+    if (!$(event.target).closest(".hamburger .items, .hamburger input").length) return $(".hamburger .items").hide();
+    $(".hamburger .items").show();
+    value = $(".hamburger input").val().toLowerCase();
+    $(".hamburger .items a").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+});
+$(".hamburger input").on("keyup", function() {
+    value = $(this).val().toLowerCase();
+    $(".hamburger .items a").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
 });
 </script>
 </html>

@@ -38,6 +38,7 @@
         let pagex = new RegExp('p{(.*) \\+\\+ (.*)} (.*)');
         let tip = new RegExp('t{(.*)}');
         let user = new RegExp("u{\n(?:'card': '(.*)';\n|.*\n)?(?:'desc': '(.*)';\n|.*\n)?(?:'github': '(.*)';\n|.*\n)?(?:'name': '(.*)';\n|.*\n)?(?:'pfp': '(.*)';\n|.*\n)?(?:'twitter': '(.*)';\n|.*)?}", 'gm')
+        let img = new RegExp('<img src="(.*)" alt="(.*)" />', 'g');
         return [
             // listeners
             {
@@ -79,6 +80,10 @@
                         text = text.replace(mli, '<li>');
                         text = text.replace(mlic, '</li>');
                         text = text.replace(mem, '<em>$1</em>');
+                        return text;
+                    },
+                    'images.after': function (event, text, options, globals) {
+                        text = text.replace(img, '<a href="$1" target="_blank"><img src="$1" alt="$2" title="$2" /></a>')
                         return text;
                     }
                 }

@@ -15,6 +15,7 @@ const express = require('express'),
           tables: 'true',
           underline: 'true',
           disableForced4SpacesIndentedSublists: 'true',
+          openLinksInNewWindow: 'true',
           extensions: ['showdownDBH', showdownHighlight({ pre: true })]
       });
 
@@ -58,6 +59,7 @@ app.get('/issue-tracker', (req, res) => {
             iconNextPage: np[2],
             logo: dbh.randomLogo(),
             menu: items,
+            menuFormatted: dbh.filterSummary(items),
             metaDescription: description,
             nextPage: np[0]
         });
@@ -87,6 +89,7 @@ app.get('*', (req, res) => {
                 iconNextPage: np[2],
                 logo: dbh.randomLogo(),
                 menu: items,
+                menuFormatted: dbh.filterSummary(items),
                 metaDescription: description,
                 nextPage: np[0]
             });

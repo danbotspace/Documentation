@@ -52,6 +52,12 @@ function randomLogo() {
     return logo;
 }
 
+function filterSummary(text) {
+    const em = new RegExp('<em>(.*)</em>', 'gm');
+    text = text.replace(/<ul>/gm, ' ').replace(/<\/ul>/gm, ' ').replace(/<li>/gm, ' ').replace(/<\/li>/gm, ' ').replace(em, ' ');
+    return text;
+}
+
 module.exports = {
-    defineMessage, exec, npFromSummary, randomLogo
+    defineMessage, exec, filterSummary, npFromSummary, randomLogo
 };
