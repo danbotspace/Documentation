@@ -101,7 +101,7 @@ app.get('*', (req, res) => {
 // If DBH port is present, returns the port if not, returns 8080.
 app.listen(PORT, () => {
     require('figlet')('DBH Docs', {
-        font: 'Speed'
+        font: 'Bloody'
     }, function(err, data) {
         console.clear();
         console.log(require('chalk').blue.bold(data) + '\n');
