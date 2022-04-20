@@ -34,11 +34,10 @@
     'use strict';
     showdown.extension('showdownDBH', function () {
         let copy = new RegExp('\\?\\?(.*)\\?\\?', 'gm');
-        let page = new RegExp('p{(.*)} (.*)');
-        let pagex = new RegExp('p{(.*) \\+\\+ (.*)} (.*)');
+        let page = new RegExp('p{(.*)} (.*)', 'g');
+        let pagex = new RegExp('p{(.*) \\+\\+ (.*)} (.*)', 'g');
         let tip = new RegExp('t{(.*)}');
         let user = new RegExp("u{\n(?:'card': '(.*)';\n|.*\n)?(?:'desc': '(.*)';\n|.*\n)?(?:'github': '(.*)';\n|.*\n)?(?:'name': '(.*)';\n|.*\n)?(?:'pfp': '(.*)';\n|.*\n)?(?:'twitter': '(.*)';\n|.*)?}", 'gm')
-        let img = new RegExp('<img src="(.*)" alt="(.*)" />', 'g');
         return [
             // listeners
             {
@@ -83,8 +82,7 @@
                         return text;
                     },
                     'images.after': function (event, text, options, globals) {
-                        text = text.replace(img, '<a href="$1" target="_blank"><img src="$1" alt="$2" title="$2" /></a>')
-                        return text;
+                        return text.replace(/<img src="(.*)" alt="(.*)" \/>/g, '<a href="$1" target="_blank"><img src="$1" alt="$2" title="$2" /></a>');
                     }
                 }
             }

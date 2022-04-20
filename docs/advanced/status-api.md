@@ -19,7 +19,6 @@ t{**Good To Know**: status is updated every second}
 You may get information for these items using its API:
 
 p{//status.danbot.host/json/stats.json} JSON Service Status
-
 t{**Warning**: Amount of items in the list is updated as soon as new node appears.}
 
 A simple example of getting information using [Node.js](/server/development/nodejs) `node-fetch` v3 package:

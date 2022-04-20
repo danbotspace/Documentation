@@ -40,7 +40,10 @@ app.get('/issue-tracker', (req, res) => {
     fs.readdir(directory, (err, files) => {
         if (err) console.log(dbh.defineMessage('ERR', err));
         let count = 1;
-        files.sort() // Sort in descending alphabetic order
+        function compareNumbers(a, b) {
+            return a.slice(0, -3) - b.slice(0, -3);
+        }
+        files.sort(compareNumbers)
             .reverse()
             .forEach(file => {
                 converted += `<li id="${count}'"><hr>\n` + fs.readFileSync(directory + '/' + file, 'utf8') + '</li>';
@@ -101,7 +104,7 @@ app.get('*', (req, res) => {
 // If DBH port is present, returns the port if not, returns 8080.
 app.listen(PORT, () => {
     require('figlet')('DBH Docs', {
-        font: 'Bloody'
+        font: 'Whimsy'
     }, function(err, data) {
         console.clear();
         console.log(require('chalk').blue.bold(data) + '\n');
