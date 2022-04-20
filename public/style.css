@@ -328,7 +328,6 @@ a, button {
 .content p, .content li, .next-page p {
     color: var(--light-silver-1);
     line-height: 1.3;
-    list-style: disc;
 }
 .content > p {
     margin-bottom: 10px;
