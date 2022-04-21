@@ -173,6 +173,7 @@ a, button {
 }
 .next-page {
     position: absolute;
+    margin: 0 !important;
     top: -20%;
     left: 50%;
     height: 50px;
