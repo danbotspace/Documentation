@@ -22,6 +22,27 @@ body {
     --davys-gray-1: #52555c;
     --rum-1: #646472;
     --light-silver-1: #d9d9df;
+
+    /* --primary: #5865f2;
+    --dim-primary: #747ff8;
+    --white: #000;
+    --chinese-black-1: #eaeaea;
+    --raisin-black-2: #dbdbd7;
+    --raisin-black-1: #d8d8d4;
+    --dark-charcoal-3: #d3d3ce;
+    --dark-charcoal-2: #cececa;
+    --dark-charcoal-1: #ccccc7;
+    --onyx-3: #c9c9c5;
+    --onyx-2: #c9c9c4;
+    --onyx-1: #c2c2be;
+    --quartz-3: #b7b7af;
+    --quartz-2: #b4b4ac;
+    --quartz-1: #b0b0a7;
+    --davys-gray-1: #adaaa3;
+    --rum-1: #9b9b8d;
+    --light-silver-1: #262620;
+    Soon™ */
+
     font-family: 'Varela Round', sans-serif;
     scrollbar-color: var(--davys-gray-1) var(--raisin-black-2);
     scrollbar-width: thin;
@@ -174,7 +195,6 @@ a, button {
 .next-page {
     position: absolute;
     margin: 0 !important;
-    top: -20%;
     left: 50%;
     height: 50px;
     width: 265px;
