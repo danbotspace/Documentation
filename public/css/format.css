@@ -1,0 +1,207 @@
+.content {
+    color: var(--white);
+}
+.content li li {
+    margin-left: 15px;
+}
+.content p, .content li, .next-page p {
+    color: var(--light-silver-1);
+    line-height: 1.3;
+}
+.content > p {
+    margin-bottom: 10px;
+}
+.content > pre, code {
+	border: 1px solid var(--onyx-2);
+    background-color: var(--dark-charcoal-1);
+    border-radius: 2px;
+}
+.content pre {
+    padding: 10px;
+    margin: 16px 0;
+    white-space: break-spaces;
+}
+.content code {
+	padding: 0.125rem 0.3125rem 0.0625rem;
+}
+.content pre code {
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+}
+.content a, .footer a {
+	color: var(--primary);
+    text-decoration: none;
+    transition: all ease-in-out .12s;
+}
+.content a:hover, .footer a:hover {
+	color: var(--dim-primary);
+	transition: all ease-in-out .12s;
+}
+.content > h6, h5, h4, h3, h2, h1 {
+	margin: 26px 0 16px;
+}
+.content img {
+	margin: 12px auto;
+	display: block;
+	max-width: 100%;
+    border-radius: 2px;
+}
+.content blockquote {
+	border-left: 3px solid var(--onyx-2);
+	padding-left: 10px;
+	margin: 5px 0;
+}
+.content hr {
+    border: 0;
+    background-color: var(--dark-charcoal-2);
+    height: 2px;
+    margin: 15px 5px;
+}
+.content .issue-tracker {
+    list-style: none;
+}
+.content btn {
+    display: flex;
+    width: fit-content;
+    border: 1px solid var(--onyx-2);
+    background-color: var(--dark-charcoal-1);
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: all ease-in-out .05s;
+}
+.content btn:hover {
+    background-color: var(--quartz-2);
+    border: 1px solid var(--quartz-1);
+    transition: all ease-in-out .05s;
+}
+.content btn:active {
+    border: 1px solid var(--rum-1);
+    background-color: var(--quartz-2);
+}
+.content table {
+    border-collapse: separate;
+    border: solid var(--onyx-2) 1px;
+    border-radius: 6px;
+    overflow: hidden;
+    border-spacing: 0;
+    background-color: var(--dark-charcoal-1);
+}
+.content td, th {
+    padding: 13px 10px;
+    border-left:solid var(--raisin-black-1) 1px;
+    border-top:solid var(--raisin-black-1) 1px;
+}
+.content th {
+    padding: 15px 10px;
+    background-color: var(--onyx-2);
+    border-top: none;
+    text-align: left;
+}
+.content td:first-child, .content th:first-child {
+    border-left: none;
+}
+
+/* --- WIDGETS --- */
+.card {
+    border: 1px solid var(--onyx-2);
+    background-color: var(--dark-charcoal-1);
+    border-radius: 4px;
+    padding: 15px;
+    margin: 15px;
+}
+.page {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    transition: all ease-in-out .12s;
+    color: var(--white) !important;
+}
+.page i {
+    display: inline-block;
+	margin-right: 15px;
+    font-size: 30px;
+}
+.page:hover {
+    background-color: var(--quartz-2);
+    border: 1px solid var(--quartz-1);
+    transition: all ease-in-out .12s;
+}
+tip {
+    font-size: 14px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+}
+tip i {
+    min-width: 45px;
+    font-size: 30px;
+    color: var(--white);
+    float: left;
+}
+user {
+    display: block;
+    font-size: 20px;
+    color: var(--white);
+}
+user img {
+    width: 80px;
+    height: 80px;
+    margin: 0 12px 0 0 !important;
+    float: left;
+    border-radius: 4px !important;
+}
+user span {
+    font-size: 14px;
+    color: var(--light-silver-1);
+    margin: 5px 0;
+    word-break: break-word;
+}
+user t {
+    display: flex;
+    flex-direction: column;
+}
+user i {
+    margin-left: 5px;
+}
+user i:hover {
+    background-color: var(--quartz-3);
+}
+copy:before {
+    display: inline-block;
+    font: var(--fa-font-solid);
+    content: "\f0c5";
+    min-width: 22px;
+    font-size: 16px;
+    color: var(--white);
+}
+copy:hover {
+    background-color: var(--onyx-3);
+}
+copy {
+    transition: all ease-in-out .12s;
+    display: inline-block;
+    position: relative;
+    margin: 8px 10px;
+    padding: 13px;
+    border-radius: 4px;
+    user-select: none;
+    cursor: pointer;
+}
+copy f {
+    position: absolute;
+    padding: 13px;
+    border-radius: 4px;
+    background-color: var(--raisin-black-2);
+    top: -50%;
+    left: 0;
+    opacity: 0;
+    transition: all ease-in-out .12s;
+}
+copy f.active {
+    transition: all ease-in-out .12s;
+    opacity: 0.8;
+}

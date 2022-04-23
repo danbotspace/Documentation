@@ -22,7 +22,7 @@ t{**Note**: All game servers are limited to 2GB Ram usage.}
 
 To easily get started checkout either `#📗╏getting-started` channel in DBH Discord Server or head to this page:
 
-p{fa-solid fa-book ++ https://help.dbh.wtf/getting-started} Getting Started
+p{fa-solid fa-book ++ /getting-started} Getting Started
 
 ## What is the project for?
 

@@ -1,0 +1,120 @@
+@media screen and (max-width: 1250px) {
+    /* --- BASE --- */
+    body {
+	height: 100%;
+        overflow-y: hidden;
+    }
+    body.unwrap {
+        height: auto;
+        overflow-y: auto;
+    }
+    
+    /* --- HEADER --- */
+    .header {
+        padding: 0 2%;
+        width: 96%;
+        height: 80px;
+        position: fixed;
+    }
+    .header.active {
+        box-shadow: 0 0 5px var(--chinese-black-1);
+    }
+    .header-links a {
+        padding: 0 15px;
+	    font-size: 12px;
+    }
+    .header-links i {
+        margin-left: 10px;
+        display: block;
+        font-size: 18px;
+        padding: 9px 12px;
+        border-radius: 6px;
+    }
+
+    /* --- FOOTER --- */
+    .footer {
+        flex-direction: column;
+        height: 100px;
+    }
+    .footer div {
+        margin-top: 5px;
+    }
+
+    /* --- SIDEBAR --- */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        box-sizing: border-box;
+        z-index: 3;
+        box-shadow: 0 0 20px var(--chinese-black-1);
+    }
+    .sidebar.unwrap {
+        box-shadow: none;
+        width: 0;
+    }
+    .fa-bars {
+        display: unset !important;
+    }
+    .hamburger {
+        position: unset;
+    }
+    .hamburger input {
+        width: 230px;
+        position: absolute;
+        top: 50%;
+        left: calc(100% - 60px);
+        transform: translate(-100%, -50%);
+    }
+    .hamburger .items {
+        width: 190px;
+        top: 70%;
+        left: calc(100% - 60px);
+        transform: translate(-100%, 0);
+    }
+    .hamburger input, .header-links a {
+        opacity: 1;
+        visibility: visible;
+        transition: visibility .25s, opacity .25s ease-in-out;
+    }
+    .hamburger input.inactive, .header-links a.inactive {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .container {
+        height: 80px;
+    }
+    .logo.unwrap {
+    	opacity: 0;
+    	visibility: hidden;
+    }
+    .items.unwrap {
+    	visibility: hidden;
+    	opacity: 0;
+    }
+    .shadow {
+    	position: fixed;
+    	width: 100vw;
+    	height: 100vh;
+    	opacity: .5;
+    	background-color: #000;
+    	transition: visibility .5s, opacity .5s ease-in-out;
+    	z-index: 2;
+    }
+    .shadow.unwrap {
+    	visibility: hidden;
+    	opacity: 0;
+    }
+
+    /* --- CONTENT --- */
+    .content {
+        width: unset;
+        margin: 90px auto 0 auto;
+        min-height: calc(100vh - 200px);
+    }
+    
+    /* --- WIDGETS --- */
+    user img {
+    	width: 60px;
+    	height: 60px;
+    }
+}

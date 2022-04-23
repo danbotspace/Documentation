@@ -1,6 +1,7 @@
 {
+  "main": "views/js/app.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon views/js/app.js"
   },
   "dependencies": {
     "chalk": "^4.1.2",

@@ -32,18 +32,18 @@
     }
 }(function (showdown) {
     'use strict';
-    showdown.extension('showdownDBH', function () {
-        let copy = new RegExp('\\?\\?(.*)\\?\\?', 'gm');
-        let page = new RegExp('p{(.*)} (.*)', 'g');
-        let pagex = new RegExp('p{(.*) \\+\\+ (.*)} (.*)', 'g');
-        let tip = new RegExp('t{(.*)}');
-        let user = new RegExp("u{\n(?:'card': '(.*)';\n|.*\n)?(?:'desc': '(.*)';\n|.*\n)?(?:'github': '(.*)';\n|.*\n)?(?:'name': '(.*)';\n|.*\n)?(?:'pfp': '(.*)';\n|.*\n)?(?:'twitter': '(.*)';\n|.*)?}", 'gm')
+    showdown.extension('DBH', function () {
         return [
             // listeners
             {
                 type: 'listener',
                 listeners: {
                     'italicsAndBold.after': function (event, text, options, globals) {
+                        const copy = new RegExp('\\?\\?(.*)\\?\\?', 'gm');
+                        const page = new RegExp('p{(.*)} (.*)', 'g');
+                        const pagex = new RegExp('p{(.*) \\+\\+ (.*)} (.*)', 'g');
+                        const tip = new RegExp('t{(.*)}');
+                        const user = new RegExp("u{\n(?:'card': '(.*)';\n|.*\n)?(?:'desc': '(.*)';\n|.*\n)?(?:'github': '(.*)';\n|.*\n)?(?:'name': '(.*)';\n|.*\n)?(?:'pfp': '(.*)';\n|.*\n)?(?:'twitter': '(.*)';\n|.*)?}", 'gm');
                         // Copy syntax
                         text = text.replace(copy, '<copy>$1<f>Copied!</f></copy>');
                         // Tip syntax
@@ -66,22 +66,17 @@
                         return text;
                     },
                     'githubCodeBlocks.after': function (event, text, options, globals) {
-                        let mlink = new RegExp('\\+\\+ (.*) \\+\\+ (.*) \\+\\+ (.*) \\+\\+', 'g');
-                        let mli = new RegExp('\\[\\[', 'g');
-                        let mlic = new RegExp('\\]\\]', 'g');
-                        let mul = new RegExp('{{', 'g');
-                        let mulc = new RegExp('}}', 'g');
-                        let mem = new RegExp('\\+-(.*)-\\+', 'g');
                         // Menu syntax
-                        text = text.replace(mlink, '<a href="$2"><i class="$1"></i>$3</a>');
-                        text = text.replace(mul, '<ul>');
-                        text = text.replace(mulc, '</ul>');
-                        text = text.replace(mli, '<li>');
-                        text = text.replace(mlic, '</li>');
-                        text = text.replace(mem, '<em>$1</em>');
+                        text = text.replace(/\+\+ (.*) \+\+ (.*) \+\+ (.*) \+\+/g, '<a href="$2"><i class="$1"></i>$3</a>');
+                        text = text.replace(/{{/g, '<ul>');
+                        text = text.replace(/}}/g, '</ul>');
+                        text = text.replace(/\[\[/g, '<li>');
+                        text = text.replace(/\]\]/g, '</li>');
+                        text = text.replace(/\+-(.*)-\+/g, '<em>$1</em>');
                         return text;
                     },
                     'images.after': function (event, text, options, globals) {
+                        // Making images clickable
                         return text.replace(/<img src="(.*)" alt="(.*)" \/>/g, '<a href="$1" target="_blank"><img src="$1" alt="$2" title="$2" /></a>');
                     }
                 }
