@@ -4,7 +4,9 @@ Hello there! You seem to be troubled in creating servers, figuring out how DBH a
 
 Here you can find solutions to your issues, extra help and additional free content to improve your programming experience!
 
---- 
+---
+
+![Banner](/dbh-banner.jpg)
 
 ## What's DBH?
 
