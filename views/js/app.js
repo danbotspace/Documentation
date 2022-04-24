@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-const path = require('path');
 const showdown  = require('showdown');
-const showdownHighlight = require('showdown-highlight');
 
 const dbh = require('./functions');
 const extension = require('./extension'); // Used to add custom extension
@@ -21,7 +19,7 @@ const converter = new showdown.Converter({
     underline: 'true',
     disableForced4SpacesIndentedSublists: 'true',
     openLinksInNewWindow: 'true',
-    extensions: ['DBH', showdownHighlight({ pre: true })]
+    extensions: ['DBH', require('showdown-highlight')({ pre: true })]
 });
 
 // Middleware.
@@ -32,7 +30,7 @@ app.set('trust proxy', 1);
 app.set('view engine', 'ejs');
 app.use(express.static("./public", {
     setHeaders: function(res, hpath) {
-        if (path.extname(hpath) == '.css') return;
+        if (require('path').extname(hpath) == '.css') return;
         res.set('Cache-control', 'public, max-age=' + 60 * 60 * 24 * 365.24 * 1000); // A year
     }
 }));
@@ -106,7 +104,7 @@ app.get('*', (req, res) => {
 // If DBH port is present, returns the port if not, returns 8080.
 app.listen(PORT, () => {
     require('figlet')('DBH Docs', {
-        font: 'Whimsy'
+        font: 'Elite'
     }, function(err, data) {
         console.clear();
         console.log(require('chalk').blue.bold(data) + '\n');
