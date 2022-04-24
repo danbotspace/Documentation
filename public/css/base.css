@@ -66,7 +66,7 @@ body {
     text-decoration-color: var(--white);
     -webkit-tap-highlight-color: transparent;
 }
-.content p > img, .content pre, .page, tip, user, table, .hamburger .items, btn {
+.content a > img, .content pre, .page, tip, user, table, .hamburger .items, btn {
     box-shadow: 0 3px 5px var(--raisin-black-2);
 }
 a, button {
@@ -234,7 +234,6 @@ a, button {
     scrollbar-width: thin;
     overflow-y: scroll;
     user-select: none;
-    padding-bottom: 50px;
 }
 .sidebar::-webkit-scrollbar {
     width: 8px;
@@ -252,6 +251,7 @@ a, button {
     visibility: visible;
     opacity: 1;
     transition: visibility .5s, opacity .5s ease-in-out;
+    margin-bottom: 50px;
 }
 .items i {
     margin-right: 8px;

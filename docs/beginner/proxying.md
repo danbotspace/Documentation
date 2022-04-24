@@ -17,11 +17,11 @@ t{**Good to know**: By becoming a donator you get an access to *.only-fans.club!
 
 In order to proxy your domain to one of your servers you have to set a DNS record!
 
-![Add a record](/content/add-record.png)
+![Add a record](/content/proxying/add-record.png)
 
 There after clicking "Add record" you have to fill all fields as in the image:
 
-![Fill given fields](/content/proxy-fields.png)
+![Fill given fields](/content/proxying/proxy-fields.png)
 
 Consider adding this IP ??164.132.74.251??
 
@@ -35,6 +35,6 @@ As always you should use given in [Getting Started](/getting-started) channels. 
 
 After it is done you have to wait up to 1-2 minutes to see the result. Bot will ping you if it is proxied!
 
-![Successful proxying](/content/proxying-success.png)
+![Successful proxying](/content/proxying/proxying-success.png)
 
 t{**Note**: if you faced a problem and bot didn't give you a success result please consider contacting moderation in order to fix your issue. Also make sure everything is fine in your proxy fields!}

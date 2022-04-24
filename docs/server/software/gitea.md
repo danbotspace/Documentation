@@ -4,9 +4,9 @@ Apart from a Git with a cup of Tea:
 
 > Gitea is an open-source forge software package for hosting software development version control using Git as well as other collaborative features like bug tracking, wikis and code review. It supports self-hosting but also provides a free public first-party instance.
 
-p{https://en.wikipedia.org/wiki/Gitea} Source: Wikipedia
+p{fa-brands fa-wikipedia-w ++ https://en.wikipedia.org/wiki/Gitea} Source: Wikipedia
 
-----
+---
 
 We ask you to read entirely this document because if you skip one step you might break the server and you will need to reinstall everything.
 
@@ -22,7 +22,7 @@ For a donator server: `DBH!server create-donator gitea [optional server name]`
 
 t{**Note:** This server might take up to 2 minutes installing, so we ask you to be patient until it installs. However, this doesn't mean that it will be auto-configurated, it just installs the configuration files. That's it.}
 
-![gitea server installing](/content/server-installing.jpg)
+![gitea server installing](/content/gitea/server-installing.jpg)
 
 # Configuration
 
@@ -32,17 +32,17 @@ t{**Temporary note:** Gitea has a SSL bug, so your navigator won't access the se
 
 Now, edit the domain (just replace the 0.0.0.0) with your Proxied domain (if you have) or the server's default domain **WITHOUT** the port. It should look something like this:
 
-![gitea server app.ini](/content/gitea-appini.png)
+![gitea server app.ini](/content/gitea/gitea-appini.png)
 
 ## Creating a Database
 
 In the gitea's configuration you will be asked to create a database. Luckly, DBH offers you 2 free databases per server. For creating one go to the panel, click on your server, then click "Databases" and then "New Database". Give it a name and click *Create Database*.
 
-![database creation](/content/database-create.png)
+![database creation](/content/gitea/database-create.png)
 
 Once you've created your server, you will be able to see your DB's information, and should look like this: 
 
-![database details](/content/database-details.jpg)
+![database details](/content/gitea/database-details.jpg)
 
 If you click the eye, you will be able to see more details, including DB password.
 
@@ -56,7 +56,7 @@ Now you should be prompted the gitea's configuration page.
 
 t{**Pro tip:** You can leave the page and the server won't break, but please note that all the changes you've made won't be saved until you install it.}
 
-![gitea inital configuration](/content/gitea-initial-config.png)
+![gitea inital configuration](/content/gitea/gitea-initial-config.png)
 
 ### Database Settings
 
@@ -107,6 +107,6 @@ This is a very common error and when installing this error can appear. This is d
 
 Once the server has installed you should see this:
 
-![gitea installed succefully](/content/gitea-installed-main-page.png)
+![gitea installed succefully](/content/gitea/gitea-installed-main-page.png)
 
 Now you can reload the web safely.

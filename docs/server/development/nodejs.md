@@ -26,7 +26,7 @@ If you are going to install dependencies into the server, which most likely you 
 
 Log in into the [panel](https://panel.danbot.host), go to your server, then open the server's files by clicking the folder icon (fig. 1) on the left bar. You now should be in this empty page:
 
-![panel showing empty server files](/content/file-manager.png)
+![panel showing empty server files](/content/nodejs/file-manager.png)
 
 Now click in New File (fig. 2). Now you can create a new file. Give it the name of `package.json` and insert this code (replace it with your own dependencies):
 
@@ -47,7 +47,7 @@ t{**Note**: JSON formatting must be strictly followed! If you faced an issue rel
 
 Please make sure to have installed [node and npm](https://nodejs.org) first. Then, in your computer, press Win + R, and type `cmd`. In the Command Prompt, type `cd Desktop` then Enter, and then `npm init` then Enter again. With this commands you will going to create a package.json file into your desktop. Now you should see this prompt:
 
-![A cmd prompt that has executed npm init](/content/npm-init.png)
+![A cmd prompt that has executed npm init](/content/nodejs/npm-init.png)
 
 Now you need to type the fields that the prompt asks you. Press Enter once you filled a field to fill the next one.
 
@@ -57,7 +57,7 @@ Once you have filled everything, a package.json file should appear in your deskt
 
 Now, log in into the [panel](https://panel.danbot.host), go to your server, then open the server's files by clicking the folder icon (fig. 1) on the left bar. You now should be in this empty page:
 
-![panel showing empty server files](/content/file-manager.png)
+![panel showing empty server files](/content/nodejs/file-manager.png)
 
 (Please ignore fig. 2)
 
