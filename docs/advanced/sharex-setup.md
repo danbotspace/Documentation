@@ -22,7 +22,7 @@ Before creating a **ShareX** server you have to install **ShareX** program on yo
 
 ## Create a server
 
-In order to learn on how to create a **ShareX** server please visit [this page](/server/sharex)!
+In order to learn on how to create a **ShareX** server please visit [this page](/server/software/sharex/)!
 
 ## Manage files
 
