@@ -3,6 +3,8 @@
 Status API represents status for each node as well as for proxy, panel, mail server etc.
 > Not to be confused with [Hetrix Uptime](//uptime.danbot.host/) page!
 
+---
+
 # About web page
 
 ![Visual Status Page Appearance](/content/status-api/appearance.png)
