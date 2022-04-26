@@ -78,6 +78,14 @@ u{
 'twitter': 'wrenfreddie';
 }
 u{
+'card': '';
+'desc': 'Is one of the best DBH developers as he made a great contribution to the [DBH code](//github.com/DanBot-Hosting/DanBotHostingStats).';
+'github': 'Hadimhz';
+'name': 'Solo';
+'pfp': '//avatars.githubusercontent.com/u/40409775';
+'twitter': '';
+}
+u{
 'card': 'https://jmgcoding.com';
 'desc': 'An another developer of DBH and a nice guy.';
 'github': 'JamieGrimwood';
