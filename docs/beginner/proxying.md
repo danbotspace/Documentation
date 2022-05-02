@@ -23,7 +23,9 @@ There after clicking "Add record" you have to fill all fields as in the image:
 
 ![Fill given fields](/content/proxying/proxy-fields.png)
 
-Consider adding this IP ??164.132.74.251??
+Consider adding these IPs: ??164.132.74.251?? or ??192.95.42.75??
+
+t{**Warning**: As for 02.05.2022 it is now recommended to use another canadian proxy ip which is 192.95.42.75 as the french one has hit cap 164.132.74.251!}
 
 t{**Note**: if you're using cloudflare consider turning off "Proxy Status".}
 
