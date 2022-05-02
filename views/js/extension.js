@@ -39,7 +39,7 @@
                 type: 'listener',
                 listeners: {
                     'italicsAndBold.after': function (event, text, options, globals) {
-                        const copy = new RegExp('\\?\\?(.*)\\?\\?', 'gm');
+                        const copy = new RegExp('\\?\\?(.*?)\\?\\?', 'gm');
                         const page = new RegExp('p{(.*)} (.*)', 'g');
                         const pagex = new RegExp('p{(.*) \\+\\+ (.*)} (.*)', 'g');
                         const tip = new RegExp('t{(.*)}');
