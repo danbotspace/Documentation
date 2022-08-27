@@ -10,7 +10,7 @@ u{
 'desc': 'A fullstack developer who designed, automated and made the script for the website.';
 'github': 'Domin-MND';
 'name': 'Domin';
-'pfp': '//cdn.discordapp.com/avatars/418306434317680641/c4e25d827eb5a88b5191a2ea97bd5544?size=512';
+'pfp': '//avatars.githubusercontent.com/u/69919939';
 'twitter': 'Dominiff';
 }
 u{
@@ -34,7 +34,7 @@ u{
 'desc': 'A great contributor and fond of this project who made tutorials.';
 'github': 'migue802';
 'name': 'migue802 ';
-'pfp': '//cdn.discordapp.com/avatars/337182695723630593/a_9ab744c62f2c491ac579a40420aa653d?size=512';
+'pfp': '//avatars.githubusercontent.com/u/54627022';
 'twitter': '';
 }
 u{
@@ -58,7 +58,7 @@ u{
 'desc': 'The one who originally created a [timeline](//github.com/CurryBoi29/DanBot-Hosting-Timeline) for DanBot Hosting';
 'github': 'CurryBoi29';
 'name': 'Curry';
-'pfp': '//cdn.discordapp.com/avatars/405771597761216522/a_9f9351e54b9924e162efebafb63cd15c?size=512';
+'pfp': '//avatars.githubusercontent.com/u/53649280';
 'twitter': '';
 }
 u{
@@ -87,7 +87,7 @@ u{
 }
 u{
 'card': 'https://jmgcoding.com';
-'desc': 'An another developer of DBH and a nice guy.';
+'desc': 'A former developer of DBH and a nice guy.';
 'github': 'JamieGrimwood';
 'name': 'Jamie';
 'pfp': '//avatars.githubusercontent.com/u/59361355';
