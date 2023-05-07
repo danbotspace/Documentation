@@ -1,3 +1,7 @@
+# Discontinued
+
+The DBH API is discontinued and will no longer work. 
+
 # DBH API
 
 DBH API is an Application Programming Interface used to share [Discord bot](/beginner/creating-a-bot) information to DBH using API post requests. This makes bot searchable using `DBH!info <bot id>` or viewable through [https://danbot.host/bots](https://danbot.host/bots)!
